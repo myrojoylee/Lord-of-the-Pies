@@ -5,10 +5,11 @@
             <h3>Your recipies here:</h3>
             {{#each recipe}}
             <h4 class="rec-name">{{name}}</h4>
-            <p>{{directions}}</p>
+            <p>{{instructions}}</p>
             {{/each}}
     </section>
     {{else}}
     <p class="norec">No recipes saved! Check out the site to find what you love!</p>
+    <button class="homebtn" type="button" onclick="<!--Going to add homepage link here-->">Home</button>
     {{/if}}
 <!--Test page for user profile-->
