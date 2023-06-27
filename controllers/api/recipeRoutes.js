@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
-const { Recipe } = require("../../..models");
+const { Recipe } = require("../../models");
 
 //TO DO: POST route to create a new recipe
 
