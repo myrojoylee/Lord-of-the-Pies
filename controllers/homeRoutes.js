@@ -45,7 +45,32 @@ router.get('/profile', withAuth, async (req, res) => {
 });
 
 // TO DO: create route for recipe by id.
-
+router.get('/profile/recipe/:id', async (req, res) => {
+  try {
+    const recipeData = await Recipe.findByPk(req.params.id, {
+      includes: [
+        {
+          model: User,
+          attributes: ['name'] 
+        },
+        {
+          model: Comment,
+          attributes: ['recipe_id', 'user_id']
+        },
+      ]
+    })
+    const recipe = recipeData.get({plain: true})
+    console.log(recipe)
+    if (!recipeData) {
+      res.status(404).json({message: 'No recipe found'})
+    }
+    res.render('/recipe/:id', {
+      ...recipe
+    })
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}) 
 // Specify attributes so that we can render
 // receipt name, recipe detail, recipe author, recipe date, and associated comments
 
