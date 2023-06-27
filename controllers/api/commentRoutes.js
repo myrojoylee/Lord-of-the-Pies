@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
-const { Comment } = require("../../..models");
+const { Comment } = require("../../models");
 
 // TO DO: GET route to find all comments
 // Remember to initialize session variables
