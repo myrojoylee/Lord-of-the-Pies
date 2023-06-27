@@ -1,3 +1,28 @@
 <section>
   <h2>At some point there will be things here</h2>
 </section>
+<div class="">
+  <h3>{{recipes.length}} Recipes:</h3>
+  {{#each recipes as |recipe|}}
+    <section class="">
+      <div class="">
+
+        <article class="">
+          <a href="/recipe/{{id}}">
+            <h3 class="">[<span>{{id}}</span>] {{name}}</h3>
+          </a>
+          <p class="blog-author">Posted by
+            {{user.name}}
+            on
+            {{format_date created_at}}</p>
+        </article>
+        <article class="">
+          <p>
+            {{recipe.detail}}
+          </p>
+        </article>
+      </div>
+    </section>
+  {{/each}}
+</div>
+

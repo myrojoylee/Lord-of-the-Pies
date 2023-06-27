@@ -1,14 +1,54 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lord of the Pies</title>
-    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-  </head>
-  <body>
-    <header></header>
-    <main>{{{body}}}</main>
-    <footer></footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lord of the Pies</title>
+  <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+</head>
+
+<body>
+  <section class="hero is-medium is-link">
+    <div class="hero-head">
+      <nav class="navbar is-link is-fixed-top is-active">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="../../images/pietest.png" alt="pie logo!">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active" href="/">
+                Home
+              </a>
+              <a class="navbar-item is-active" href="/login">
+                Login 
+              </a>
+              <a class="navbar-item is-active" href="/signup">
+                Signup
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title">Lord of the Pies</p>
+      <p class="subtitle">You shall not bake! (without recipies)</p>
+      </div>
+    </div>
+
+  </section>
+  <main>{{{body}}}</main>
+  <footer></footer>
+</body>
+
 </html>
