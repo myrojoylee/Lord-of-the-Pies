@@ -1,15 +1,22 @@
-  <h1>This is a test for {{name}} and the information should be here {{detail}}</h1>
-  <!--This code block will work when recipe data is defined? -->
-            {{#if recipe.length}}
-            <section class="Usrres card">
-            <h3>Your recipies here:</h3>
-            {{#each recipe}}
-            <h4 class="rec-name">{{name}}</h4>
-            <p>{{instructions}}</p>
-            {{/each}}
-    </section>
-    {{else}}
-    <p class="norec">No recipes saved! Check out the site to find what you love!</p>
-    <button class="homebtn" type="button" onclick="<!--Going to add homepage link here-->">Home</button>
-    {{/if}}
+<h1>This is a test for
+  {{name}}
+  and the information should be here
+  {{detail}}</h1>
+<!--This code block will work when recipe data is defined? -->
+{{#if recipes.length}}
+  <section class="Usrres card">
+    <h3>Your recipies here:</h3>
+    {{#each recipe as |recipe|}}
+      <h4 class="rec-name">{{name}}</h4>
+      <p>{{detail}}</p>
+    {{/each}}
+  </section>
+{{else}}
+  <p class="norec">No recipes saved! Check out the site to find what you love!</p>
+  <button
+    class="homebtn"
+    type="button"
+    onclick="<!--Going to add homepage link here-->"
+  >Home</button>
+{{/if}}
 <!--Test page for user profile-->
