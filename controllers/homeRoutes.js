@@ -75,11 +75,26 @@ router.get('/profile/recipe/:id', async (req, res) => {
 // receipt name, recipe detail, recipe author, recipe date, and associated comments
 
 // TO DO: create route for login
-
-// TO DO: create route to sign up
-router.post('/signup', async (req, res) => {
-// what do I do here lol
+router.get("/login", (req, res) => {
+  try {
+    if (req.session.logged_in){
+      res.redirect("./homepage");
+      return;
+    }
+    res.render("login");
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
+// TO DO: create route to sign up
+router.get("/signup", (req, res) => {
+  try {
+    res.render("signup");
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
+//do this
   
 
 
