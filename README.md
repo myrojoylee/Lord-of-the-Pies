@@ -9,13 +9,13 @@ WIP, follow progress below:
 GIVEN a user-submitted dessert recipe site
 
 - [ x ] WHEN I visit the site for the first time
-- [ ] THEN I am presented with the homepage, which includes existing recipe cards if any have been posted; navigation links for the homepage and the profile; and the option to log in
+- [ x ] THEN I am presented with the homepage, which includes existing recipe cards if any have been posted; navigation links for the homepage and the profile; and the option to log in
 - [ x ] WHEN I click on the homepage option
 - [ x ] THEN I am taken to the homepage
 - [ x ] WHEN I click on any other links in the navigation
 - [ x ] THEN I am prompted to either sign up or sign in
-- [ ] WHEN I choose to sign up
-- [ ] THEN I am prompted to create a username and password
+- [ x ] WHEN I choose to sign up
+- [ x ] THEN I am prompted to create a username and password
 - [ ] WHEN I click on the sign-up button
 - [ ] THEN my user credentials are saved and I am logged into the site
 - [ ] WHEN I revisit the site at a later time and choose to sign in
