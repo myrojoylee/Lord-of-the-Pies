@@ -4,19 +4,19 @@ const recipedata = [
   {
     name: "Apple Pie",
     detail: "This is how you make apple pie",
-    created_at: "June 22, 2023 13:00:00",
+    created_on: "June 22, 2023 13:00:00",
     user_id: 2,
   },
   {
     name: "Brownies",
     detail: "This is how you make brownies",
-    created_at: "June 21, 2023 15:00:00",
+    created_on: "June 21, 2023 15:00:00",
     user_id: 1,
   },
   {
     name: "Ice Cream",
     detail: "This is how you make ice cream",
-    created_at: "June 19, 2023 12:00:00",
+    created_on: "June 19, 2023 12:00:00",
     user_id: 3,
   },
 ];

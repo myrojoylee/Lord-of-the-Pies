@@ -30,10 +30,10 @@ GIVEN a user-submitted dessert recipe site
 - [ ] THEN the comment is saved and the recipe is updated to display the comment, the comment creator’s username, and the date created
 - [ ] WHEN I click on the profile option in the navigation
 - [ ] THEN I am taken to the profile and presented with any recipe posts I have already created and the option to add a new recipe
-- [ ] WHEN I click on the button to add a new recipe
-- [ ] THEN I am prompted to enter both a name and details for my recipe
-- [ ] WHEN I click on the button to create a new recipe
-- [ ] (Elvis can try this) THEN the name and details of my recipe are saved and I am taken back to an updated profile with my new recipe
+- [ x ] WHEN I click on the button to add a new recipe
+- [ x ] THEN I am prompted to enter both a name and details for my recipe
+- [ x ] WHEN I click on the button to create a new recipe
+- [ x ] (oops myro did this part already, needed it there to experiment on file uploads) THEN the name and details of my recipe are saved and I am taken back to an updated profile with my new recipe
 - [ ] WHEN I click on one of my existing recipes in the profile
 - [ ] THEN I am able to delete or update my recipe and taken back to an updated profile
 - [ ] WHEN I click on the logout option in the navigation
