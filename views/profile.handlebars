@@ -6,9 +6,9 @@
 {{#if recipes.length}}
   <section class="Usrres card">
     <h3>Your recipies here:</h3>
-    {{#each recipe as |recipe|}}
-      <h4 class="rec-name">{{name}}</h4>
-      <p>{{detail}}</p>
+    {{#each recipes as |recipe|}}
+      <h4 class="rec-name">{{recipe.name}}</h4>
+      <p>{{recipe.detail}}</p>
     {{/each}}
   </section>
 {{else}}
@@ -17,4 +17,4 @@
 {{/if}}
 <!--Test page for user profile-->
 
-<a href="/new-post" class="add-new-recipe">+</a>
+<a href="/new-recipe" class="add-new-recipe">Add New Recipe</a>
