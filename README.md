@@ -21,11 +21,11 @@ GIVEN a user-submitted dessert recipe site
 - [ x ] WHEN I revisit the site at a later time and choose to sign in
 - [ x ] THEN I am prompted to enter my username and password
 - [ ] WHEN I am signed in to the site
-- [ ] THEN I see navigation links for the homepage, the profile, and the option to log out
+- [ ] THEN I see navigation links for the homepage, the profile (Aubs), and the option to log out
 - [ x ] WHEN I click on the homepage option in the navigation
 - [ ] THEN I am taken to the homepage and presented with existing recipe cards that include the recipe name and image
 - [ ] WHEN I click on a recipe card
-- [ ] THEN I am presented with the recipe name, details, recipe creator’s username, and date created for that receipe and have the option to leave a comment
+- [ ] (Elvis) THEN I am presented with the recipe name, details, recipe creator’s username, and date created for that receipe and have the option to leave a comment
 - [ ] WHEN I enter a comment and click on the submit button while signed in
 - [ ] THEN the comment is saved and the recipe is updated to display the comment, the comment creator’s username, and the date created
 - [ ] WHEN I click on the profile option in the navigation
@@ -33,7 +33,7 @@ GIVEN a user-submitted dessert recipe site
 - [ ] WHEN I click on the button to add a new recipe
 - [ ] THEN I am prompted to enter both a name and details for my recipe
 - [ ] WHEN I click on the button to create a new recipe
-- [ ] THEN the name and details of my recipe are saved and I am taken back to an updated profile with my new recipe
+- [ ] (Elvis can try this) THEN the name and details of my recipe are saved and I am taken back to an updated profile with my new recipe
 - [ ] WHEN I click on one of my existing recipes in the profile
 - [ ] THEN I am able to delete or update my recipe and taken back to an updated profile
 - [ ] WHEN I click on the logout option in the navigation
