@@ -49,7 +49,7 @@ router.get("/profile", withAuth, async (req, res) => {
 });
 
 // TO DO: create route for recipe by id.
-router.get("/profile/recipe/:id", async (req, res) => {
+router.get("/recipe/:id", async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
       includes: [
@@ -75,9 +75,26 @@ router.get("/profile/recipe/:id", async (req, res) => {
     res.status(400).json(err);
   }
 });
-// Specify attributes so that we can render
-// receipt name, recipe detail, recipe author, recipe date, and associated comments
 
+// route for new recipe creation
+router.get("/new-recipe", withAuth, async (req, res) => {
+  try {
+    // Find the logged in blogger based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+      include: [{ model: Recipe }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render("new-post", {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // TO DO: create route for login
 router.get("/login", (req, res) => {
   try {
