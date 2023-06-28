@@ -9,7 +9,7 @@ WIP, follow progress below:
 GIVEN a user-submitted dessert recipe site
 
 - [ x ] WHEN I visit the site for the first time
-- [ ] THEN I am presented with the homepage, which includes existing recipe cards if any have been posted; navigation links for the homepage and the profile; and the option to log in
+- [ x ] THEN I am presented with the homepage, which includes existing recipe cards if any have been posted; navigation links for the homepage and the profile; and the option to log in
 - [ x ] WHEN I click on the homepage option
 - [ x ] THEN I am taken to the homepage
 - [ x ] WHEN I click on any other links in the navigation
@@ -22,7 +22,7 @@ GIVEN a user-submitted dessert recipe site
 - [ x ] THEN I am prompted to enter my username and password
 - [ ] WHEN I am signed in to the site
 - [ ] THEN I see navigation links for the homepage, the profile, and the option to log out
-- [ ] WHEN I click on the homepage option in the navigation
+- [ x ] WHEN I click on the homepage option in the navigation
 - [ ] THEN I am taken to the homepage and presented with existing recipe cards that include the recipe name and image
 - [ ] WHEN I click on a recipe card
 - [ ] THEN I am presented with the recipe name, details, recipe creator’s username, and date created for that receipe and have the option to leave a comment
