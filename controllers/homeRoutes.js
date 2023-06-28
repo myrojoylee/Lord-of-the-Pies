@@ -87,7 +87,7 @@ router.get("/new-recipe", withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render("new-post", {
+    res.render("new-recipe", {
       ...user,
       logged_in: true,
     });

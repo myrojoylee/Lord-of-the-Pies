@@ -1,7 +1,9 @@
-input {
-  display: block;
+a:visited,
+a:active,
+a:link {
+  color: black;
+  text-decoration: none;
 }
-
 body {
   background-color: pink;
   min-height: 100vh;
@@ -28,11 +30,8 @@ main {
   font-size: 100%;
 }
 
-#pie {
-  width: 500%;
-}
-
 .add-new-recipe {
   background-color: blueviolet;
-  border-radius: 50%;
+  width: 100px;
+  border-radius: 0.25em;
 }
