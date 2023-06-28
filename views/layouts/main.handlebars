@@ -8,7 +8,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <script src="https://kit.fontawesome.com/9b4edce180.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9b4edce180.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section class="hero is-medium is-link">
@@ -17,9 +20,9 @@
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item pie-parent">
-                <img id="pie" src="../../images/pietest.png" alt="pie logo!">
+                <img id="pie" src="../../images/pietest.png" alt="pie logo" />
               </a>
-              <p id="direction"> Click on the pie!</p>
+              <p class="navbar-item" id="direction"> Click on the pie!</p>
               <span class="navbar-burger">
                 <span></span>
                 <span></span>
@@ -32,14 +35,17 @@
                   Home
                 </a>
                 {{#if logged_in}}
-                <button class = "no-button navbar-item is-active" id = "logout">Logout</button>
+                  <button
+                    class="no-button navbar-item is-active"
+                    id="logout"
+                  >Logout</button>
                 {{else}}
-                <a class="navbar-item is-active" href="/login">
-                  Login
-                </a>
-                <a class="navbar-item is-active" href="/signup">
-                  Signup
-                </a>
+                  <a class="navbar-item is-active" href="/login">
+                    Login
+                  </a>
+                  <a class="navbar-item is-active" href="/signup">
+                    Signup
+                  </a>
                 {{/if}}
               </div>
             </div>
@@ -54,13 +60,17 @@
       </div>
     </section>
     <section class="columns">
-    <aside class="column is-one-third"></aside>
-    <main class="column is-one-third">{{{body}}}</main>
-    <aside class="column is-one-third"></aside>
+      <aside class="column is-one-third"></aside>
+      <main class="column is-one-third">{{{body}}}</main>
+      <aside class="column is-one-third"></aside>
     </section>
     <footer class="footer">
       <div class="content has-text-centered">
-        <p><strong>Lord of the Pies</strong> is brought to you by a <a href="https://github.com/myrojoylee/Lord-of-the-Pies">wonderful group of devs </a>who totally understand how this all works.</p>
+        <p><strong>Lord of the Pies</strong>
+          is brought to you by a
+          <a href="https://github.com/myrojoylee/Lord-of-the-Pies">wonderful
+            group of devs
+          </a>who totally understand how this all works.</p>
       </div>
     </footer>
   </body>
@@ -69,5 +79,5 @@
 
 <script src="/js/speechRecognition.js"></script>
 {{#if logged_in}}
-<script src = "/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
 {{/if}}

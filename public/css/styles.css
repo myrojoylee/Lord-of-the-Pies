@@ -27,3 +27,12 @@ main {
   text-decoration: none;
   font-size: 100%;
 }
+
+#pie {
+  width: 500%;
+}
+
+.add-new-recipe {
+  background-color: blueviolet;
+  border-radius: 50%;
+}
