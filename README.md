@@ -22,7 +22,7 @@ GIVEN a user-submitted dessert recipe site
 - [ ] THEN I am prompted to enter my username and password
 - [ ] WHEN I am signed in to the site
 - [ ] THEN I see navigation links for the homepage, the profile, and the option to log out
-- [ ] WHEN I click on the homepage option in the navigation
+- [ x ] WHEN I click on the homepage option in the navigation
 - [ ] THEN I am taken to the homepage and presented with existing recipe cards that include the recipe name and image
 - [ ] WHEN I click on a recipe card
 - [ ] THEN I am presented with the recipe name, details, recipe creator’s username, and date created for that receipe and have the option to leave a comment
