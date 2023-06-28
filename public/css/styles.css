@@ -4,4 +4,17 @@ input {
 
 body {
   background-color: pink;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 50vh;
+}
+
+.footer {
+  margin-top: 0;
+}
+
+.takespaceL {
+  min-width: 50vh;
 }
