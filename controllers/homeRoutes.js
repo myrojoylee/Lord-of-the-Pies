@@ -54,12 +54,12 @@ router.get("/recipe/:id", async (req, res) => {
     const recipeData = await Recipe.findByPk(req.params.id, {
       includes: [
         {
-          model: User,
-          attributes: ["name"],
+          model: Comment,
+          include: [User],
         },
         {
-          model: Comment,
-          attributes: ["recipe_id", "user_id"],
+          model: User,
+          attributes: ["name", "id"],
         },
       ],
     });
@@ -68,9 +68,22 @@ router.get("/recipe/:id", async (req, res) => {
     if (!recipeData) {
       res.status(404).json({ message: "No recipe found" });
     }
-    res.render("/recipe/:id", {
-      ...recipe,
-    });
+
+    if (recipe.user_id === req.session.user_id) {
+      res.render("recipe", {
+        ...recipe,
+        user_id: req.session.user_id,
+        user_name: req.session.user_name,
+        logged_in: req.session.logged_in,
+      });
+    } else {
+      res.render("comment", {
+        ...recipe,
+        user_id: req.session.user_id,
+        user_name: req.session.user_name,
+        logged_in: req.session.logged_in,
+      });
+    }
   } catch (err) {
     res.status(400).json(err);
   }

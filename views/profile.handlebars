@@ -7,8 +7,10 @@
   <section class="Usrres card">
     <h3>Your recipies here:</h3>
     {{#each recipes as |recipe|}}
-      <h4 class="rec-name">{{recipe.name}}</h4>
-      <p>{{recipe.detail}}</p>
+      <a href="/recipe/{{id}}">
+        <h4 class="rec-name">{{name}}</h4>
+      </a>
+      <p>{{detail}}</p>
     {{/each}}
   </section>
 {{else}}

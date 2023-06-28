@@ -23,6 +23,7 @@ const logging = () => {
     const speechToText = event.results[0][0].transcript;
     // button.textContent = speechToText;
     document.querySelector("body").style.backgroundColor = speechToText;
+    direction.textContent = `Click to try again`;
     // if (speechToText === "profile") {
     //   document.querySelector("button").textContent = `Redirecting to profile!`;
     //   setTimeout(() => {

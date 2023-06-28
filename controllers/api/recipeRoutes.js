@@ -4,7 +4,21 @@ const { Recipe } = require("../../models");
 
 //TO DO: POST route to create a new recipe
 
-//TO DO: DELETE route to delete a recipe by id
+router.get("/:id", async (req, res) => {
+  try {
+    const recipeData = await Recipe.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+    res.status(200).json(recipeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.post("/", withAuth, async (req, res) => {
   try {
@@ -17,6 +31,33 @@ router.post("/", withAuth, async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(400).json(err);
+  }
+});
+
+// updating a recipe by id
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+    const updatedRecipeData = await Recipe.update(
+      {
+        name: req.body.name,
+        detail: req.body.detail,
+      },
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      }
+    );
+
+    if (!updatedRecipeData) {
+      res.status(400).json({ message: "No recipe found with that id!" });
+      return;
+    }
+
+    res.status(200).json(updatedRecipeData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
