@@ -4,11 +4,14 @@ const newRecipeHandler = async (event) => {
 
   const name = document.querySelector("#recipe-name").value.trim();
   const detail = document.querySelector("#recipe-detail").value.trim();
-
-  if (name && detail) {
+  const alt_text = document.querySelector("#alt_text").value.trim();
+  const filename = document.querySelector("#recipe-filename").value.trim();
+  console.log(alt_text);
+  console.log(filename);
+  if (name && detail && alt_text && filename) {
     const response = await fetch(`/api/recipes`, {
       method: "POST",
-      body: JSON.stringify({ name, detail }),
+      body: JSON.stringify({ name, detail, alt_text, filename }),
       headers: { "Content-Type": "application/json" },
     });
 
