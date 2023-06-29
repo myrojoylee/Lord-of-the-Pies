@@ -19,6 +19,14 @@ Recipe.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    alt_text: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     created_on: {
       type: DataTypes.DATE,
       allowNull: false,
