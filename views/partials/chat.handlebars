@@ -1,0 +1,56 @@
+<section class="chatbot-collapsible">
+  <button id="chatBtn" type="button" class="collapsible">Chat with us!
+    <i
+      id="chat-icon"
+      class="fa-solid fa-messages-question fa fa-fw fa-comments-o"
+      style="color: #fff"
+    ></i>
+  </button>
+  <article class="content">
+    <div class="full-chat-block">
+      {{! message container }}
+      <div class="outer-container">
+        <div class="chat-container">
+          {{! Messages }}
+          <div id="chatbox">
+            <h5 id="chat-timestamp"></h5>
+            <p class="botText" id="botStarterMessage"><span
+              >Loading...</span></p>
+          </div>
+          {{! user input box }}
+          <div class="chat-bar-input-block">
+            <div id="userInput">
+              <input
+                id="textInput"
+                class="input-box"
+                type="text"
+                name="msg"
+                placeholder="Tap 'Enter' to send a message"
+              />
+              <p></p>
+            </div>
+            <div class="chat-bar-icons">
+              <i
+                id="chat-icon"
+                class="fa fa-fw fa-heart"
+                style="color: blue;"
+                onclick="thumbsUpBtn()"
+              ></i>
+              <i
+                id="chat-icon"
+                class="fa fa-fw fa-send"
+                style="color: #333;"
+                onclick="sendBtn()"
+              ></i>
+            </div>
+          </div>
+          <div id="chat-bar-bottom">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+<script src="/js/chat.js"></script>
+<script src="/js/responses.js"></script>
