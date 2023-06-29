@@ -1,0 +1,34 @@
+<section class="card-wrapper">
+  <h3 class="title"><u>Submit A New Recipe</u></h3>
+
+  <form class="new-recipe-form">
+    <div class="field">
+      <label for="recipe-name" class="label title">Recipe Name:</label>
+      <div class="control">
+        <input class="form-input" type="text" id="recipe-name" name="recipe-name" />
+      </div>
+    </div>
+    <div class="field">
+      <label for="recipe-detail" class="label title">Details:</label>
+      <textarea class="recipe-detail textarea is-small" rows="5" id="recipe-detail" name="recipe-detail"></textarea>
+    </div>
+    <div class="field file is-boxed">
+      <label for="recipe-filename" class="file-label title">
+      <input class="file-input" type="file" , id="recipe-filename" , name="recipe-filename" , accept=".jpg, .jpeg, .png" />
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">Upload a photo...</span>
+      </span>
+      </label>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+      <button class="button" type="submit" class="submitRecipeBtn button">Submit Post</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<script src="/js/new-recipe.js"></script>

@@ -1,0 +1,50 @@
+<div class="">
+  <section class="">
+    <h3>Edit Post:</h3>
+    <form class="new-post-form">
+      <article class="">
+        <label for="recipe-title">Post Title:</label>
+        <textarea
+          class="form-input"
+          type="text"
+          id="update-name"
+          name="update-name"
+        >{{name}}</textarea>
+      </article>
+      <article class="">
+        <label for="recipe-detail">Type details below:</label>
+        <textarea
+          class="update-detail"
+          id="update-detail"
+          name="update-detail"
+        >{{detail}}</textarea>
+      </article>
+
+      <article class="update-delete">
+        <button id="updateBtn" data-id="{{id}}">UPDATE</button>
+        <button id="deleteBtn" data-id="{{id}}">DELETE</button>
+      </article>
+
+    </form>
+  </section>
+
+  {{#if comments.length}}
+    <article class="card">
+      <h3>{{comments.length}} Comments:</h3>
+
+      {{#each comments as |comment|}}
+
+        <div class="card">
+          <p class="card-detail" id="commenter">
+            {{comment.user.name}}
+            says:
+          </p>
+          <p class="card-detail">{{detail}}</p>
+        </div>
+      {{/each}}
+    </article>
+  {{/if}}
+
+</div>
+
+<script src="/js/recipe.js"></script>

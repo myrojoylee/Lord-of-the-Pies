@@ -12,17 +12,22 @@
             <h3 class="">[<span>{{id}}</span>] {{name}}</h3>
           </a>
           <p class="blog-author">Posted by
-            {{user.name}}
+            {{user.username}}
             on
-            {{format_date created_at}}</p>
+            {{format_date created_on}}</p>
         </article>
         <article class="">
           <p>
             {{recipe.detail}}
+          </p>
+          <p>
+            <img
+              src="../../images/{{recipe.filename}}"
+              alt="{{recipe.alt_text}}"
+            />
           </p>
         </article>
       </div>
     </section>
   {{/each}}
 </div>
-
