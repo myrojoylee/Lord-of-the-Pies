@@ -35,3 +35,11 @@ main {
   width: 100px;
   border-radius: 0.25em;
 }
+
+.candyhead {
+  background-color: #90eef6;
+}
+
+/* .candybody {
+  background-color: #e4a0d6;
+} fucking with column colors*/
