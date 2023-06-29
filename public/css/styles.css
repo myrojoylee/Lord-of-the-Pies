@@ -22,7 +22,7 @@ main {
 }
 
 .no-button {
-  background: none;
+  background: #3a51bb;
   border: none;
   padding: 0;
   cursor: pointer;
