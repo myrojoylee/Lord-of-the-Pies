@@ -11,12 +11,13 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["name"],
+          attributes: ["username"],
         },
       ],
     });
-
+    
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+    console.log(recipes);
     res.render("homepage", {
       recipes,
       logged_in: req.session.logged_in,
@@ -52,14 +53,14 @@ router.get("/profile", withAuth, async (req, res) => {
 router.get("/recipe/:id", async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
-      includes: [
+      include: [
         {
           model: Comment,
           include: [User],
         },
         {
           model: User,
-          attributes: ["name", "id"],
+          attributes: ["username", "id"],
         },
       ],
     });
@@ -85,6 +86,7 @@ router.get("/recipe/:id", async (req, res) => {
       });
     }
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
