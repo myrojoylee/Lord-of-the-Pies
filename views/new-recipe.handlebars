@@ -1,39 +1,33 @@
 <section class="card-wrapper">
-  <h3>Submit A New Recipe:</h3>
+  <h3 class="title"><u>Submit A New Recipe</u></h3>
 
   <form class="new-recipe-form">
-    <article class="">
-      <label for="recipe-name">Recipe Name:</label>
-      <input
-        class="form-input"
-        type="text"
-        id="recipe-name"
-        name="recipe-name"
-      />
-    </article>
-    <article class="">
-      <label for="recipe-detail">Details:</label>
-      <textarea
-        class="recipe-detail"
-        id="recipe-detail"
-        name="recipe-detail"
-      ></textarea>
-    </article>
-    <article>
-      <label for="recipe-filename">Upload a photo:</label>
-      <input
-        type="file"
-        ,
-        id="recipe-filename"
-        ,
-        name="recipe-filename"
-        ,
-        accept=".jpg, .jpeg, .png"
-      />
-    </article>
-    <article>
-      <button type="submit" class="submitRecipeBtn">Submit Post</button>
-    </article>
+    <div class="field">
+      <label for="recipe-name" class="label title">Recipe Name:</label>
+      <div class="control">
+        <input class="form-input" type="text" id="recipe-name" name="recipe-name" />
+      </div>
+    </div>
+    <div class="field">
+      <label for="recipe-detail" class="label title">Details:</label>
+      <textarea class="recipe-detail textarea is-small" rows="5" id="recipe-detail" name="recipe-detail"></textarea>
+    </div>
+    <div class="field file is-boxed">
+      <label for="recipe-filename" class="file-label title">
+      <input class="file-input" type="file" , id="recipe-filename" , name="recipe-filename" , accept=".jpg, .jpeg, .png" />
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">Upload a photo...</span>
+      </span>
+      </label>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+      <button class="button" type="submit" class="submitRecipeBtn button">Submit Post</button>
+      </div>
+    </div>
   </form>
 </section>
 
