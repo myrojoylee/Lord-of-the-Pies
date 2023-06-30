@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-    
+
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
     console.log(recipes);
     res.render("homepage", {
@@ -91,7 +91,7 @@ router.get("/recipe/:id", async (req, res) => {
       });
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -114,6 +114,10 @@ router.get("/new-recipe", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get("/camera", withAuth, async (req, res) => {
+  res.render("camera");
 });
 // TO DO: create route for login
 router.get("/login", (req, res) => {

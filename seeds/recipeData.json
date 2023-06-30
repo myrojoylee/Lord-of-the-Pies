@@ -3,7 +3,7 @@
     "name": "Apple Pie",
     "detail": "This is how you make apple pie",
     "created_on": "June 22, 2023 13:00:00",
-    "filename": "apple-pie.png",
+    "filename": "https://thumbs.dreamstime.com/b/apple-pie-slice-21973798.jpg",
     "alt_text": "apple pie",
     "user_id": 2
   },
@@ -11,7 +11,7 @@
     "name": "Brownies",
     "detail": "This is how you make brownies",
     "created_on": "June 21, 2023 15:00:00",
-    "filename": "brownies.png",
+    "filename": "https://thumbs.dreamstime.com/b/chocolate-brownies-stack-homemade-bars-closeup-59783720.jpg",
     "alt_text": "brownies",
     "user_id": 1
   },
@@ -19,7 +19,7 @@
     "name": "Ice Cream",
     "detail": "This is how you make ice cream",
     "created_on": "June 19, 2023 12:00:00",
-    "filename": "cherry-ice-cream.png",
+    "filename": "https://thumbs.dreamstime.com/b/cherry-ice-cream-homemade-table-55868225.jpg",
     "alt_text": "cherry ice cream",
     "user_id": 3
   }
