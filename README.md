@@ -47,6 +47,8 @@ GIVEN a user-submitted dessert recipe site
 
 ## Acknowledgments
 
+Chatbox code taken from [Federico Azzu](https://github.com/federicoazzu/mscbot)'s repository.
+
 ## License
 
 Refer to the license in the repo.
