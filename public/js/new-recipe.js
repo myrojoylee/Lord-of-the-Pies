@@ -5,7 +5,7 @@ const newRecipeHandler = async (event) => {
   const name = document.querySelector("#recipe-name").value.trim();
   const detail = document.querySelector("#recipe-detail").value.trim();
   const alt_text = document.querySelector("#alt_text").value.trim();
-  const filename = document.querySelector("#recipe-filename").value.trim();
+  const filename = document.querySelector("#filename").value;
   console.log(alt_text);
   console.log(filename);
   if (name && detail && alt_text && filename) {
