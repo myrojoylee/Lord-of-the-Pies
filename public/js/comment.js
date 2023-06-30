@@ -19,7 +19,7 @@ const commentFormHandler = async (event) => {
     ];
     console.log(id);
     if (response.ok) {
-      document.location.replace(`/recipe/${id}`);
+      window.location.reload();
     } else {
       detail.textContent = `Field cannot be left blank!`;
     }

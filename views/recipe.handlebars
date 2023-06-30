@@ -42,7 +42,6 @@
         name="comment-detail"
         placeholder="Commenting as {{user_name}}..."
       ></textarea>
-
       <button
         type="submit"
         class="submitCommentBtn"
@@ -68,5 +67,7 @@
   {{/if}}
 
 </div>
-
+[<span id="numbered-post">{{id}}</span>]{{name}}
+<span id="current-user">{{user_id}}</span>
 <script src="/js/recipe.js"></script>
+<script src="/js/comment.js"></script>
