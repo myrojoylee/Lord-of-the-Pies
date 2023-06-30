@@ -50,7 +50,7 @@ router.get("/profile", withAuth, async (req, res) => {
 });
 
 // TO DO: create route for recipe by id.
-router.get("/recipe/:id", async (req, res) => {
+router.get("/recipe/:id", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
@@ -59,8 +59,8 @@ router.get("/recipe/:id", async (req, res) => {
           include: [
             {
               model: User,
-              attributes: ["username"]
-            }
+              attributes: ["username"],
+            },
           ],
         },
         {

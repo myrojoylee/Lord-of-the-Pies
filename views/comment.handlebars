@@ -3,7 +3,7 @@
     <div class="">
       <article class="">
         <h2 class="">
-         
+
         </h2>
         <p>
           Posted by
@@ -20,6 +20,21 @@
       </article>
     </div>
   </div>
+  <form class="card">
+
+    <label class="form-detail" for="comment-detail">Type your comment below:</label>
+    <textarea
+      class="form-detail"
+      id="comment-detail"
+      name="comment-detail"
+      placeholder="Commenting as {{user_name}}..."
+    ></textarea>
+    <button
+      type="submit"
+      class="submitCommentBtn"
+      data-id="{{recipe.id}}"
+    >Submit your comment</button>
+  </form>
   {{! renders list of comments if they exist }}
   {{#if comments.length}}
     <article class="card">
@@ -37,6 +52,5 @@
     </article>
   {{/if}}
 
-  
 </section>
-
+<script src="/js/comment.js"></script>
