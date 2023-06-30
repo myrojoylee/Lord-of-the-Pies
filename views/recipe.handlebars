@@ -1,32 +1,54 @@
+<p class="title is-underlined">Details about your wonderful creation!</p>
 <div class="">
-  <section class="">
-    <h3>Edit Post:</h3>
-    <form class="new-post-form">
-      <article class="">
-        <label for="recipe-title">Post Title:</label>
-        <textarea
-          class="form-input"
+    <h1 class="subtitle">Edit Post:</h1>
+    <div class="new-post-form field">
+        <label class="label" for="recipe-title">Post Title:</label>
+        <div class="control">
+        <input
+          class="form-input input"
           type="text"
           id="update-name"
           name="update-name"
-        >{{name}}</textarea>
-      </article>
-      <article class="">
-        <label for="recipe-detail">Type details below:</label>
+        ></input>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="recipe-detail">Type details below:</label>
+        <div class="control">
         <textarea
-          class="update-detail"
+          class="update-detail textarea is-small"
+          row="5"
           id="update-detail"
           name="update-detail"
         >{{detail}}</textarea>
-      </article>
-
-      <article class="update-delete">
-        <button id="updateBtn" data-id="{{id}}">UPDATE</button>
-        <button id="deleteBtn" data-id="{{id}}">DELETE</button>
-      </article>
-
+        </div>
+      </div>
+      <div class="update-delete field is-grouped">
+        <div class="control">
+        <button class="button" id="updateBtn" data-id="{{id}}">UPDATE</button>
+        </div>
+        <div class="control">
+        <button class="button" id="deleteBtn" data-id="{{id}}">DELETE</button>
+        </div>
+      </div>
     </form>
-  </section>
+
+     <form class="card">
+
+      <label class="form-detail" for="comment-detail">Type your comment below:</label>
+      <textarea
+        class="form-detail"
+        id="comment-detail"
+        name="comment-detail"
+        placeholder="Commenting as {{user_name}}..."
+      ></textarea>
+
+      <button
+        type="submit"
+        class="submitCommentBtn"
+        data-id="{{recipe.id}}"
+      >Submit your comment</button>
+    </form>
 
   {{#if comments.length}}
     <article class="card">
