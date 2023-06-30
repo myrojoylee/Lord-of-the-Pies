@@ -1,42 +1,40 @@
-<h1 class="title">This is a test for
-  {{username}}
-  and the information should be here
-  {{detail}}</h1>
+<h1 class="title has-text-centered">Hey
+  {{username}}!</h1>
 <!--This code block will work when recipe data is defined? -->
-<h3 class="subtitle has-text-centered"><u>Your recipies here</u></h3>
+<h3 class="title has-text-centered"><u>Your recipies here</u></h3>
 {{#if recipes.length}}
+{{#each recipes as |recipe|}}
 <div class="card">
-  {{#each recipes as |recipe|}}
   <div class="card-image">
-    <figure class="image is-3by3">
-      <img src="{{filename}}" alt="test image for now">
+    <figure class="image is-4by3">
+      <img src="../../images/{{recipe.filename}}" alt="{{recipe.alt_text}}">
     </figure>
   </div>
   <div class="card-content">
     <div class="media">
       <div class="media-left">
-        <figure class="image is-24x24">
+        <figure class="image is-36x36">
           <img src="../images/pietest.png" alt="basic pie image">
         </figure>
       </div>
+      <div class="media-content">
+        <a href="/recipe/{{id}}">
+          <h4 class="rec-name title">{{name}}</h4>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="media-content">
-    <a href="/recipe/{{id}}">
-      <h4 class="rec-name title is-6">{{name}}</h4>
-    </a>
-  </div>
   <div class="content">
-    <p class="subtitle is-6">{{detail}}</p>
-    <time>{{created_on}}</time>
+    <p class="subtitle is-6">{{recipe.detail}}</p>
   </div>
+  <p>Posted on {{format_date created_on}}</p>
 </div>
+</div>
+<br>
 {{/each}}
-</div>
 {{else}}
 <p class="norec">No recipes saved! Check out the site to find what you love!</p>
 <a href="/"><button class="homebtn" type="button">Home</button></a>
 {{/if}}
-<!--Test page for user profile-->
 
-<a href="/new-recipe" class=" button add-new-recipe">Add New Recipe</a>
+<a href="/new-recipe" class="button is-fullwidth">Add New Recipe</a>
