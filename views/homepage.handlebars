@@ -13,21 +13,19 @@
           <img src="../images/pietest.png" alt="basic pie image">
         </figure>
       </div>
-  <div class="media-content">
-    <a href="/recipe/{{id}}">
-      <h3 class="rec-name title">[<span>{{id}}</span>] {{name}}</h3>
-    </a>
-  <p class="blog-author subtitle">Posted by
-      {{user.username}}</p>
+      <div class="media-content">
+        <a href="/recipe/{{id}}">
+          <h3 class="rec-name title">[<span>{{id}}</span>] {{name}}</h3>
+        </a>
+        <p class="blog-author subtitle">Posted by
+          {{user.username}}</p>
+      </div>
+    </div>
   </div>
-  </div>
-
   <div class="content">
-    <p>{{recipe.detail}}</p>
-    <p class="subtitle">
-      Posted on {{format_date created_on}}
-    </p>
+    <p class="subtitle">{{recipe.detail}}</p>
   </div>
+  <p>Posted on {{format_date created_on}}</p>
 </div>
 </div>
 <br>
