@@ -1,4 +1,5 @@
 <h3 class="title has-text-centered mt-2"><u>There are {{recipes.length}} recipes in your feed!</u></h3>
+{{user.id}}
 {{#each recipes as |recipe|}}
 <div class="card">
   <div class="card-image">
@@ -30,4 +31,3 @@
 </div>
 <br>
 {{/each}}
-{{> chat}}
