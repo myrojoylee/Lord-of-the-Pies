@@ -1,9 +1,11 @@
+const router = require("express").Router();
 //TO DO:
-// require router
-// require Tag model
+// require Tag, Recipe, and RecipeTag model
 
 // GET to find all tags
 
 // GET to find a single tag
+// make sure to include associated Recipe model
+// using RecipeTag as a through table
 
-// export this route
+module.exports = router;
