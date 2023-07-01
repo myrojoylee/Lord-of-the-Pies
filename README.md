@@ -12,9 +12,9 @@ GIVEN that the main CRUD functionality of the site is already accomplished:
 
 #### Models
 
-- [ ] Tag Model for searching - Damien
-- [ ] RecipeTag Model for through table between recipe and tag (many to many association) - Damien
-- [ ] Associations for Tag and RecipeTag in index.js
+- [ x ] Tag Model for searching - Damien
+- [ x ] RecipeTag Model for through table between recipe and tag (many to many association) - Damien
+- [ x ] Associations for Tag and RecipeTag in index.js - Damien
 
 #### Views
 
