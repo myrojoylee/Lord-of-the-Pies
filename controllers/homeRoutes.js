@@ -111,15 +111,13 @@ router.get("/new-recipe", withAuth, async (req, res) => {
     res.render("new-recipe", {
       ...user,
       logged_in: true,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get("/camera", withAuth, async (req, res) => {
-  res.render("camera");
-});
 // TO DO: create route for login
 router.get("/login", (req, res) => {
   try {
