@@ -20,6 +20,7 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       recipes,
       logged_in: req.session.logged_in,
+      user_name: req.session.user_name,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -42,6 +43,7 @@ router.get("/profile", withAuth, async (req, res) => {
     res.render("profile", {
       ...user,
       logged_in: true,
+      user_name: req.session.user_name,
     });
   } catch (err) {
     res.status(400).json(err);
