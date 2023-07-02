@@ -36,8 +36,7 @@
                   Home
                 </a>
                 {{#if logged_in}}
-                  <a class="navbar-item is-active" href="/profile">
-                    My Profile
+                 <a class="navbar-item is-active" href="/profile"><span id="profile-name" >{{user_name}}</span>'s Profile
                   </a>
                   <button
                     class="no-button navbar-item is-active"

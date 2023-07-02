@@ -103,51 +103,6 @@ keyToStart.addEventListener("keydown", (e) => {
 });
 
 function getUsername() {
-  let x = document.querySelector("h1").textContent.split(" ");
-  x.shift();
-  let y = x.join(" ").slice(0, -1);
-  return y;
+  let username = document.querySelector("#profile-name").textContent;
+  return username;
 }
-
-// loading dot animation every 300ms
-// function loader(element) {
-//   element.textContent = "";
-
-//   loadInterval = setInterval(() => {
-//     element.textContent += ".";
-
-//     element.textContent === "...." ? (element.textContent = "") : null;
-//   }, 300);
-// }
-
-// function typeText(element, text) {
-//   let index = 0;
-
-//   let interval = setInterval(() => {
-//     if (index < text.length) {
-//       element.innerHTML += text.charAt(index);
-//       index++;
-//     } else {
-//       clearInterval(interval);
-//     }
-//   }, 20);
-// }
-
-// function generateUniqueId() {
-//   const timeStamp = Date.now();
-//   const randomNumber = Math.random();
-//   const hexadecimalString = randomNumber.toString(16);
-
-//   return `id-${timeStamp}-${hexadecimalString}`;
-// }
-
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   const data = new FormData(form);
-
-//   //user chatstripe
-//   chatContainer.innerHTML += chatStripe(false, data.get("prompt"));
-
-//   form.reset();
-// };
