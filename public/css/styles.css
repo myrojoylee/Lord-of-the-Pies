@@ -49,12 +49,12 @@ main {
   background-color: #e4a0d6;
 } fucking with column colors*/
 
-
+/* 
 #recipes {
   display: flex;
   flex-direction: column;
   gap: 1em;
-}
+} */
 
 #searchRecipe {
   font-size: 1.25em;
@@ -69,4 +69,3 @@ main {
     width: 100%;
   }
 }
-
