@@ -20,8 +20,8 @@ GIVEN that the main CRUD functionality of the site is already accomplished:
 
 - [ x ] Login page has a button that leads to signing up for those who are new - Aubrey
 - [ x ] Sign up page has a button that leads to logging in for returning users. - Aubrey
-- [ ] Once logged out, page says "You are logged out, click here to log in again" - Aubrey
-- [ ] Hamburger menu to expand upon clicking
+- [ ] Once logged out, page says "You are logged out, click here to log in again"
+- [ ] Hamburger menu to expand upon clicking - Aubrey
 - [ ] Homepage: 3 or 4 recipe cards in one row on desktop, 1 each on mobile 
 - [ ] Homepage: Recipe card should contain title, photo (details only when you click) - Aubrey
 
