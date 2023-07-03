@@ -5,7 +5,7 @@
     {{recipes.length}}
     recipes in your feed!</u></h3>
 {{user.id}}
-<div id="recipes">
+<div id="recipes is-flex is-flex-direction-row is-flex-wrap">
   {{#each recipes as |recipe|}}
    {{> recipe-card}}
   {{/each}}

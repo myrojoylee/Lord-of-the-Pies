@@ -32,8 +32,9 @@
 <br>
 {{/each}}
 {{else}}
-<p class="norec">No recipes saved! Check out the site to find what you love!</p>
-<a href="/"><button class="homebtn" type="button">Home</button></a>
+<p class="norec title has-text-centered">No recipes saved! Check out the site to find what you love!</p>
+<!--There's already a home button in the nav, this seems redundant -->
+{{!-- <a href="/"><button class="homebtn" type="button">Home</button></a> --}}
 {{/if}}
 
 <a href="/new-recipe" class="button is-fullwidth">Add New Recipe</a>
