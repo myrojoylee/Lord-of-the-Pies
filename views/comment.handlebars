@@ -2,9 +2,6 @@
   <div class="">
     <div class="">
       <article class="">
-        <h2 class="">
-         
-        </h2>
         <p>
           Posted by
           {{user.username}}
@@ -22,21 +19,24 @@
   </div>
   {{! renders list of comments if they exist }}
   {{#if comments.length}}
-    <article class="card">
-      <h3>{{comments.length}} Comments:</h3>
+    <h3 class="subtitle">{{comments.length}} Comments:</h3>
+    
       {{#each comments as |comment|}}
-
-        <div class="card">
-          <p class="card-detail" id="comment">
-            {{comment.user.username}}
+      <article class="card comment mt-2">
+          <div class="card-content">
+            <div class="media">
+            <div class="media-content">
+          <p class="card-detail subtitle" id="comment"><strong>
+            {{comment.user.username}}</strong>
             says:
           </p>
           <p class="card-detail">{{detail}}</p>
+          </div>
+          </div>
         </div>
+        </article>
       {{/each}}
-    </article>
+    
   {{/if}}
-
-  
 </section>
 
