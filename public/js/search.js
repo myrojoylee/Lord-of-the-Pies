@@ -40,7 +40,7 @@ async function renderRecipes() {
         </figure>
       </div>
       <div class="media-content">
-        <a href="/recipe/{{id}}">
+        <a href="/recipe/${recipe.id}">
           <h3 class="rec-name title">[<span>${recipe.id}</span>] ${recipe.name}</h3>
         </a>
         <p class="blog-author subtitle">Posted by
