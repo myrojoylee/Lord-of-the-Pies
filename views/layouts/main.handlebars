@@ -36,8 +36,7 @@
                   Home
                 </a>
                 {{#if logged_in}}
-                  <a class="navbar-item is-active" href="/profile">
-                    My Profile
+                 <a class="navbar-item is-active" href="/profile"><span id="profile-name" >{{user_name}}</span>'s Profile
                   </a>
                   <button
                     class="no-button navbar-item is-active"
@@ -62,6 +61,7 @@
           <p class="subtitle">You shall not bake! (without recipies)</p>
         </div>
       </div>
+{{> search}}
     </section>
     <section class="columns">
       <aside class="column is-one-third"></aside>
@@ -83,5 +83,6 @@
 
 <script src="/js/speechRecognition.js"></script>
 {{#if logged_in}}
+{{> chat}}
   <script src="/js/logout.js"></script>
 {{/if}}

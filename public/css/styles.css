@@ -48,3 +48,24 @@ main {
 /* .candybody {
   background-color: #e4a0d6;
 } fucking with column colors*/
+
+#recipes {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#searchRecipe {
+  font-size: 1.25em;
+  width: 50%;
+  height: 50px;
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  #searchRecipe {
+    font-size: 1.25em;
+    width: 100%;
+  }
+}
+

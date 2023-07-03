@@ -33,7 +33,8 @@ function getTime() {
 }
 
 function firstBotMessage() {
-  let firstMessage = `How's it going?`;
+  let y = getUsername();
+  let firstMessage = `Hi ${y}! I am Daisy, your Virtual Assistant! How are you today?`;
   document.getElementById(
     "botStarterMessage"
   ).innerHTML = `<p class="botText"><span>${firstMessage}</span></p>`;
@@ -101,45 +102,7 @@ keyToStart.addEventListener("keydown", (e) => {
   }
 });
 
-// loading dot animation every 300ms
-// function loader(element) {
-//   element.textContent = "";
-
-//   loadInterval = setInterval(() => {
-//     element.textContent += ".";
-
-//     element.textContent === "...." ? (element.textContent = "") : null;
-//   }, 300);
-// }
-
-function typeText(element, text) {
-  let index = 0;
-
-  let interval = setInterval(() => {
-    if (index < text.length) {
-      element.innerHTML += text.charAt(index);
-      index++;
-    } else {
-      clearInterval(interval);
-    }
-  }, 20);
+function getUsername() {
+  let username = document.querySelector("#profile-name").textContent;
+  return username;
 }
-
-function generateUniqueId() {
-  const timeStamp = Date.now();
-  const randomNumber = Math.random();
-  const hexadecimalString = randomNumber.toString(16);
-
-  return `id-${timeStamp}-${hexadecimalString}`;
-}
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const data = new FormData(form);
-
-  //user chatstripe
-  chatContainer.innerHTML += chatStripe(false, data.get("prompt"));
-
-  form.reset();
-};

@@ -1,15 +1,20 @@
+botResponseArray: ["Interesting...go on...", " "];
+
 function getBotResponse(input) {
-  if (input == "rock") {
+  let lowercaseInput = input.toLowerCase();
+  if (lowercaseInput == "rock") {
     return "paper";
-  } else if (input == "paper") {
+  } else if (lowercaseInput == "paper") {
     return "scissors";
-  } else if (input == "scissors") {
+  } else if (lowercaseInput == "scissors") {
     return "rock";
-  } else if (input == "hello") {
+  } else if (lowercaseInput == "hello") {
     return "Hello there!";
-  } else if (input == "goodbye") {
+  } else if (lowercaseInput == "goodbye") {
     return "Talk to you later!";
   } else {
     return "I don't have an answer for that; try typing something else!";
   }
 }
+
+function rotatingRandomBotResponse() {}
