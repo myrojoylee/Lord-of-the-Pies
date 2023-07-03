@@ -99,4 +99,4 @@ searchInput.addEventListener("keyup", (event) => {
   renderRecipes();
 });
 
-init();
+// init();
