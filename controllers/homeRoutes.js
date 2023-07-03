@@ -112,6 +112,7 @@ router.get("/new-recipe", withAuth, async (req, res) => {
       ...user,
       logged_in: true,
       logged_in: req.session.logged_in,
+      user_name: req.session.user_name,
     });
   } catch (err) {
     res.status(500).json(err);
