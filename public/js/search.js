@@ -24,9 +24,10 @@ async function renderRecipes() {
 
   if (recipesFiltered.length > 1) {
     recipesFiltered.forEach((recipe) => {
-      recipesDiv.innerHTML += `<div class="card">
+      recipesDiv.innerHTML += `
+      <h2 class="subtitle has-text-centered"> Search returned: ${recipesFiltered.length} matches </h2>
+      <div class="card">
   <div class="card-image">
-    <h2> Search returned: ${recipesFiltered.length} matches </h2>
     <figure class="image is-3by3">
       <img src="${recipe.filename}" alt="${recipe.alt_text}" />
     </figure>
@@ -55,9 +56,10 @@ async function renderRecipes() {
     });
   } else if ((recipesFiltered.length = 1)) {
     recipesFiltered.forEach((recipe) => {
-      recipesDiv.innerHTML += `<div class="card">
+      recipesDiv.innerHTML += `
+      <h2 class= " subtitle has-text-centered"> Search returned: ${recipesFiltered.length} match </h2>
+      <div class="card">
   <div class="card-image">
-    <h2> Search returned: ${recipesFiltered.length} match </h2>
     <figure class="image is-3by3">
       <img src="${recipe.filename}" alt="${recipe.alt_text}" />
     </figure>

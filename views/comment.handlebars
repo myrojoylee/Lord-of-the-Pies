@@ -1,3 +1,36 @@
+<!--Currently card server isn't working, once that is fixed, will update comment page w/card & details -Aubrey -->
+
+{{!-- <div class="card">
+  <div class="card-image">
+    <figure class="image is-3by3">
+      <img src="{{filename}}" alt="{{alt_text}}" />
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-36x36">
+          <img src="../../images/pietest.png" alt="basic pie image" />
+        </figure>
+      </div>
+      <div class="media-content">
+        <a href="/recipe/{{id}}">
+          <h3 class="rec-name title">[<span>{{id}}</span>] {{name}}</h3>
+        </a>
+        <p class="blog-author subtitle">Posted by
+          {{user.username}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <p class="subtitle">{{recipe.detail}}</p>
+  </div>
+  <p>Posted on {{format_date created_on}}</p>
+</div> --}}
+
+
+
+
 <section class="">
   <div class="">
     <div class="">
@@ -37,20 +70,24 @@
   </form>
   {{! renders list of comments if they exist }}
   {{#if comments.length}}
-    <article class="card">
-      <h3>{{comments.length}} Comments:</h3>
+    <h3 class="subtitle">{{comments.length}} Comments:</h3>
+    
       {{#each comments as |comment|}}
-
-        <div class="card">
-          <p class="card-detail" id="comment">
-            {{comment.user.username}}
+      <article class="card comment mt-2">
+          <div class="card-content">
+            <div class="media">
+            <div class="media-content">
+          <p class="card-detail subtitle" id="comment"><strong>
+            {{comment.user.username}}</strong>
             says:
           </p>
           <p class="card-detail">{{detail}}</p>
+          </div>
+          </div>
         </div>
+        </article>
       {{/each}}
-    </article>
+    
   {{/if}}
-
 </section>
 <script src="/js/comment.js"></script>
