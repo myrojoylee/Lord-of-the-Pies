@@ -1,8 +1,23 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
-const { Recipe } = require("../../models");
+const { Recipe, User } = require("../../models");
 
 //TO DO: POST route to create a new recipe
+router.get("/", async (req, res) => {
+  try {
+    const recipeData = await Recipe.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
+    res.status(200).json(recipeData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get("/:id", async (req, res) => {
   try {

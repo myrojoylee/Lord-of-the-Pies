@@ -1,0 +1,27 @@
+<div class="column card ml-2 mr-2">
+  <div class="card-image">
+    <figure class="image is-3by3">
+      <img src="{{filename}}" alt="{{alt_text}}" />
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-36x36">
+          <img src="../../images/pietest.png" alt="basic pie image" />
+        </figure>
+      </div>
+      <div class="media-content">
+        <a href="/recipe/{{id}}">
+          <h3 class="rec-name title">[<span>{{id}}</span>] {{name}}</h3>
+        </a>
+        <p class="blog-author subtitle">Posted by
+          {{user.username}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-content">
+    <p class="subtitle recdetails">{{recipe.detail}}</p>
+  </div>
+  <p>Posted on {{format_date created_on}}</p>
+</div>

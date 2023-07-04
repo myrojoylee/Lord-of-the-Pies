@@ -1,8 +1,15 @@
-<p class="title is-underlined">Details about your wonderful creation!</p>
-<div class="">
-    <h1 class="subtitle">Edit Post:</h1>
+<!--Aub note, going to add view of post here -->
+{{!-- <aside class="column is-one-third"></aside> --}}
+{{!-- <main class="column is-one-third"> --}}
+[<span id="numbered-post">{{id}}</span>]{{name}}
+<span id="current-user">{{user_id}}</span>
+
+<div class="edit">
+  <div class="has-text-centered">
+    <h1 class="title is-underlined has-text-center">Edit Post</h1>
+    </div>
     <div class="new-post-form field">
-        <label class="label" for="recipe-title">Post Title:</label>
+        <label class="label subtitle" for="recipe-title">Post Title:</label>
         <div class="control">
         <input
           class="form-input input"
@@ -13,7 +20,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="label" for="recipe-detail">Type details below:</label>
+        <label class="label subtitle" for="recipe-detail">Type details below:</label>
         <div class="control">
         <textarea
           class="update-detail textarea is-small"
@@ -23,51 +30,59 @@
         >{{detail}}</textarea>
         </div>
       </div>
-      <div class="update-delete field is-grouped">
-        <div class="control">
-        <button class="button" id="updateBtn" data-id="{{id}}">UPDATE</button>
+      
+      <div class="update-delete field is-grouped columns">
+        <div class="control column">
+        <button class="button is-rounded is-fullwidth" id="updateBtn" data-id="{{id}}">UPDATE</button>
         </div>
-        <div class="control">
-        <button class="button" id="deleteBtn" data-id="{{id}}">DELETE</button>
+        <div class="control column">
+        <button class="button is-rounded is-fullwidth is-danger" id="deleteBtn" data-id="{{id}}">DELETE</button>
         </div>
       </div>
     </form>
 
-     <form class="card">
 
-      <label class="form-detail" for="comment-detail">Type your comment below:</label>
+
+    <h1 class="title has-text-centered">Add a comment!</h1>
+     <div class="field">
+
+      <label class="form-detail label" for="comment-detail">Add your comment below:</label>
       <textarea
-        class="form-detail"
+        class="textarea"
         id="comment-detail"
         name="comment-detail"
         placeholder="Commenting as {{user_name}}..."
       ></textarea>
       <button
         type="submit"
-        class="submitCommentBtn"
+        class="submitCommentBtn button is-fullwidth mt-2 mb-2 is-rounded"
         data-id="{{recipe.id}}"
       >Submit your comment</button>
     </form>
-
-  {{#if comments.length}}
-    <article class="card">
-      <h3>{{comments.length}} Comments:</h3>
-
+   {{#if comments.length}}
+    <h3 class="title">{{comments.length}} Comments:</h3>
+    
       {{#each comments as |comment|}}
-
-        <div class="card">
-          <p class="card-detail" id="commenter">
-            {{comment.user.username}}
+      <article class="card comment mt-2">
+          <div class="card-content">
+            <div class="media">
+            <div class="media-content">
+          <p class="card-detail subtitle" id="comment"><strong>
+            {{comment.user.username}}</strong>
             says:
           </p>
           <p class="card-detail">{{detail}}</p>
+          </div>
+          </div>
         </div>
+        </article>
       {{/each}}
-    </article>
+    
   {{/if}}
 
 </div>
-[<span id="numbered-post">{{id}}</span>]{{name}}
-<span id="current-user">{{user_id}}</span>
+{{!-- </main> --}}
+{{!-- <aside class="column is-one-third"></aside> --}}
 <script src="/js/recipe.js"></script>
 <script src="/js/comment.js"></script>
+

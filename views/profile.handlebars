@@ -1,11 +1,13 @@
-<h1 class="title has-text-centered">Hey
-  {{username}}!</h1>
+{{!-- <aside class="column is-one-third"></aside>
+<main class="column is-one-third"> --}}
+<h1 class="title has-text-centered">Hey {{username}}!</h1>
 <!--This code block will work when recipe data is defined? -->
 <h3 class="title has-text-centered"><u>Your recipies here</u></h3>
 {{#if recipes.length}}
+<div class="recipe-list">
 {{#each recipes as |recipe|}}
-<div class="card">
-  <div class="card-image">
+{{> recipe-card}}
+  {{!-- <div class="card-image">
     <figure class="image is-4by3">
       <img src="{{recipe.filename}}" alt="{{recipe.alt_text}}">
     </figure>
@@ -18,23 +20,33 @@
         </figure>
       </div>
       <div class="media-content">
-        <a href="/recipe/{{id}}">
-          <h4 class="rec-name title">{{name}}</h4>
+        <a href="/recipe/{{recipe.id}}">
+          <h4 class="rec-name title">{{recipe.name}}</h4>
         </a>
       </div>
     </div>
   </div>
-  <div class="content">
+  <div class="card-content">
     <p class="subtitle is-6">{{recipe.detail}}</p>
   </div>
   <p>Posted on {{format_date created_on}}</p>
 </div>
-</div>
-<br>
+</div> --}}
+
 {{/each}}
+</div>
 {{else}}
-<p class="norec">No recipes saved! Check out the site to find what you love!</p>
-<a href="/"><button class="homebtn" type="button">Home</button></a>
+<p class="norec title has-text-centered">No recipes saved! Check out the site to find what you love!</p>
+<!--There's already a home button in the nav, this seems redundant -->
+{{!-- <a href="/"><button class="homebtn" type="button">Home</button></a> --}}
 {{/if}}
 
+
+
 <a href="/new-recipe" class="button is-fullwidth">Add New Recipe</a>
+
+
+
+
+{{!-- </main>
+<aside class="column is-one-third"></aside> --}}

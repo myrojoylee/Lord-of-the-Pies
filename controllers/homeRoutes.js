@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Recipe, Comment } = require("../models");
+const { User, Recipe, Comment, Tag, RecipeTag } = require("../models");
 const withAuth = require("../utils/auth");
 
 // renders homepage
@@ -17,10 +17,10 @@ router.get("/", async (req, res) => {
     });
 
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-    console.log(recipes);
     res.render("homepage", {
       recipes,
       logged_in: req.session.logged_in,
+      user_name: req.session.user_name,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -43,6 +43,7 @@ router.get("/profile", withAuth, async (req, res) => {
     res.render("profile", {
       ...user,
       logged_in: true,
+      user_name: req.session.user_name,
     });
   } catch (err) {
     res.status(400).json(err);
@@ -50,7 +51,7 @@ router.get("/profile", withAuth, async (req, res) => {
 });
 
 // TO DO: create route for recipe by id.
-router.get("/recipe/:id", async (req, res) => {
+router.get("/recipe/:id", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
@@ -59,8 +60,8 @@ router.get("/recipe/:id", async (req, res) => {
           include: [
             {
               model: User,
-              attributes: ["username"]
-            }
+              attributes: ["username"],
+            },
           ],
         },
         {
@@ -110,15 +111,14 @@ router.get("/new-recipe", withAuth, async (req, res) => {
     res.render("new-recipe", {
       ...user,
       logged_in: true,
+      logged_in: req.session.logged_in,
+      user_name: req.session.user_name,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get("/camera", withAuth, async (req, res) => {
-  res.render("camera");
-});
 // TO DO: create route for login
 router.get("/login", (req, res) => {
   try {

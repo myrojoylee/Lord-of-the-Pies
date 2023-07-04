@@ -36,8 +36,7 @@
                   Home
                 </a>
                 {{#if logged_in}}
-                  <a class="navbar-item is-active" href="/profile">
-                    My Profile
+                 <a class="navbar-item is-active" href="/profile"><span id="profile-name" >{{user_name}}</span>'s Profile
                   </a>
                   <button
                     class="no-button navbar-item is-active"
@@ -62,11 +61,18 @@
           <p class="subtitle">You shall not bake! (without recipies)</p>
         </div>
       </div>
+
+{{> search}}
+
     </section>
-    <section class="columns">
-      <aside class="column is-one-third"></aside>
-      <main class="column is-one-third">{{{body}}}</main>
-      <aside class="column is-one-third"></aside>
+    <section class="columns message-parent">
+      {{!-- dynamic tags will look like this  --}}
+      {{!-- <h2 id = "logout-message" style="color: black";>
+          You are now logged out. To login again, click </h2> 
+      <a href = "/login" id = "login-link" style="color: blue;">here.</a>--}}
+      {{!-- <aside class="column is-one-third"></aside> --}}
+      <main>{{{body}}}</main>
+      {{!-- <aside class="column is-one-third"></aside> --}}
     </section>
     <footer class="footer">
       <div class="content has-text-centered">
@@ -83,5 +89,6 @@
 
 <script src="/js/speechRecognition.js"></script>
 {{#if logged_in}}
+{{> chat}}
   <script src="/js/logout.js"></script>
 {{/if}}

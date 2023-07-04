@@ -1,71 +1,78 @@
-<!--TODO:
-orginize layout (might be possible fucking with main)
-set buttons to link with JS
-change colors
-cry -->
+{{! <aside class="column is-one-third"></aside> }}
+{{! <main class="column is-one-third"> }}
+<section class="login-signup">
+  <form id="signup-form">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control has-icons-left has-icons-right">
+        <input
+          id="username-signup"
+          class="input"
+          type="text"
+          placeholder="Enter your desired username here!"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+    </div>
 
-<form id="signup-form">
-  <div class="field">
-    <label class="label">Username</label>
-    <div class="control has-icons-left has-icons-right">
-      <input
-        id="username-signup"
-        class="input"
-        type="text"
-        placeholder="Enter your desired username here!"
-      />
-      <span class="icon is-small is-left">
-        <i class="fas fa-user"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-check"></i>
-      </span>
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control has-icons-left has-icons-right">
+        <input
+          id="password-signup"
+          class="input"
+          type="password"
+          placeholder="Enter your desired password here!"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
     </div>
-  </div>
 
-  <div class="field">
-    <label class="label">Password</label>
-    <div class="control has-icons-left has-icons-right">
-      <input
-        id="password-signup"
-        class="input"
-        type="password"
-        placeholder="Enter your desired password here!"
-      />
-      <span class="icon is-small is-left">
-        <i class="fas fa-user"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-check"></i>
-      </span>
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input
+          id="email-signup"
+          class="input"
+          type="email"
+          placeholder="Email input"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+      </div>
     </div>
-  </div>
+    <div class="field is-grouped columns is-6">
+      <div class="control column">
+        <button
+          class="button is-rounded is-fullwidth"
+          type="submit"
+        >Submit</button>
+      </div>
+      <div class="control column is-6">
+        <button class="button is-danger is-rounded is-fullwidth">Cancel</button>
+      </div>
+    </div>
+  </form>
 
-  <div class="field">
-    <label class="label">Email</label>
-    <div class="control has-icons-left has-icons-right">
-      <input
-        id="email-signup"
-        class="input"
-        type="email"
-        placeholder="Email input"
-      />
-      <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-exclamation-triangle"></i>
-      </span>
-    </div>
+  <div class="login">
+    <a href="/login"><button class="button is-fullwidth is-rounded">If you
+        already have an account, click here!</button></a>
   </div>
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link" type="submit">Submit</button>
-    </div>
-    <div class="control">
-      <button class="button is-link is-light">Cancel</button>
-    </div>
-  </div>
-</form>
-
+</section>
+{{! </main> }}
+{{! <aside class="column is-one-third"></aside> }}
 <script src="/js/signup.js"></script>
