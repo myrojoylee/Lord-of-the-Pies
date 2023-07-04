@@ -1,16 +1,20 @@
 <!--Aub note: figure out how to show a please log in message instead of recipies -->
-
+<aside class="column is-one-quarter"></aside>
+<main class="column is-one-half">
 <h3 class="title has-text-centered mt-2"><u>
   There are
     {{recipes.length}}
     recipes in your feed!</u></h3>
 {{user.id}}
 <!--need to figure out these flex classes-->
-<div id="recipes" class="is-flex is-flex-direction-row is-flex-wrap">
+
+<div id="recipes" class="cardwidth is-flex is-flex-wrap is-align-content-space-evenly">
   {{#each recipes as |recipe|}}
    {{> recipe-card}}
   {{/each}}
 </div>
+</main>
+<aside class="column is-one-quarter"></aside>
 
 {{!-- <script src="/js/search.js"></script> --}}
 
