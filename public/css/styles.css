@@ -45,6 +45,11 @@ main {
   background-color: #90eef6;
 }
 
+/* .cardwidth {
+  min-width: 500px;
+  min-height: 700px; 
+} fucking with making card sizes responsive*/
+
 /* .candybody {
   background-color: #e4a0d6;
 } fucking with column colors*/
@@ -54,6 +59,10 @@ main {
   flex-direction: column;
   gap: 1em;
 } */
+
+.recdetails {
+  overflow-y: auto;
+}
 
 #searchRecipe {
   font-size: 1.25em;
@@ -66,5 +75,8 @@ main {
   #searchRecipe {
     font-size: 1.25em;
     width: 100%;
+  }
+  .tinyscreen {
+    display: block;
   }
 }
