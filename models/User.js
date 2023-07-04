@@ -1,15 +1,22 @@
+// import important parts of sequelize library
 const { Model, DataTypes } = require("sequelize");
+// import bcrypt for password hashing
 const bcrypt = require("bcrypt");
+// import our database connection from config folder
 const sequelize = require("../config/connection");
 
+// Initialize User model by extending off Sequelize's Model Class
+// encrypts password entered into model
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
+
 User.init(
   {
+    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -35,6 +42,7 @@ User.init(
     },
   },
   {
+    // add hooks to encrypt password when user is created or updated
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 11);
@@ -56,4 +64,5 @@ User.init(
   }
 );
 
+// Export User
 module.exports = User;
