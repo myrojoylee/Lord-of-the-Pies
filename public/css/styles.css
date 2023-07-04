@@ -54,11 +54,12 @@ main {
   background-color: #e4a0d6;
 } fucking with column colors*/
 
-/* #recipes {
-  display: flex;
-  flex-direction: column;
+#recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2em;
   gap: 1em;
-} */
+}
 
 .recdetails {
   overflow-y: auto;
@@ -71,7 +72,16 @@ main {
   padding-left: 1em;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #recipes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 767px) {
+  #recipes {
+    grid-template-columns: 1fr;
+  }
   #searchRecipe {
     font-size: 1.25em;
     width: 100%;
