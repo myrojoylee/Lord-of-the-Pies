@@ -78,6 +78,14 @@ main {
   }
 }
 
+/* #logout-message {
+  color: transparent;
+}
+
+#login-link {
+  color: transparent;
+} */
+
 @media screen and (max-width: 767px) {
   #recipes {
     grid-template-columns: 1fr;
