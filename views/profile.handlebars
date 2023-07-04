@@ -1,3 +1,5 @@
+<aside class="column is-one-third"></aside>
+<main class="column is-one-third">
 <h1 class="title has-text-centered">Hey {{username}}!</h1>
 <!--This code block will work when recipe data is defined? -->
 <h3 class="title has-text-centered"><u>Your recipies here</u></h3>
@@ -17,13 +19,13 @@
         </figure>
       </div>
       <div class="media-content">
-        <a href="/recipe/{{id}}">
-          <h4 class="rec-name title">{{name}}</h4>
+        <a href="/recipe/{{recipe.id}}">
+          <h4 class="rec-name title">{{recipe.name}}</h4>
         </a>
       </div>
     </div>
   </div>
-  <div class="content">
+  <div class="card-content">
     <p class="subtitle is-6">{{recipe.detail}}</p>
   </div>
   <p>Posted on {{format_date created_on}}</p>
@@ -38,3 +40,5 @@
 {{/if}}
 
 <a href="/new-recipe" class="button is-fullwidth">Add New Recipe</a>
+</main>
+<aside class="column is-one-third"></aside>
