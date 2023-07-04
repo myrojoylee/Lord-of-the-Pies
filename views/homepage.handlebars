@@ -1,6 +1,7 @@
 <!--Aub note: figure out how to show a please log in message instead of recipies -->
 {{!-- <aside class="column is-one-quarter"></aside> --}}
 {{!-- <main class="column"> --}}
+
   <h3 class="title has-text-centered mt-2">
   There are
     {{recipes.length}}
@@ -9,11 +10,12 @@
 {{user.id}}
 <!--need to figure out these flex classes-->
 
-  <div id="recipes" class="columns">
+  <div id="recipes" class="recipe-list">
     {{#each recipes as |recipe|}}
         {{> recipe-card}}
     {{/each}}
   </div>
+
 {{!-- </main> --}}
 {{!-- <aside class="column is-one-quarter"> --}}
 
