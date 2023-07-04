@@ -10,7 +10,21 @@ body {
 }
 
 main {
+  /* display: flex;
+  flex-direction: column;
+  align-content: center; */
   min-height: 50vh;
+}
+
+/* .card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2em;
+  gap: 1em;
+} */
+
+.login-signup {
+  width: 100%;
 }
 
 .footer {
@@ -54,7 +68,7 @@ main {
   background-color: #e4a0d6;
 } fucking with column colors*/
 
-#recipes {
+.recipe-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2em;
@@ -73,7 +87,7 @@ main {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  #recipes {
+  .recipe-list {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -87,7 +101,7 @@ main {
 } */
 
 @media screen and (max-width: 767px) {
-  #recipes {
+  .recipe-list {
     grid-template-columns: 1fr;
   }
   #searchRecipe {
