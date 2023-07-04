@@ -8,7 +8,7 @@ const logout = async () => {
   });
 
   if (response.ok) {
-    // document.location.replace("/");
+    document.location.replace("/");
     const message = document.createElement("h2");
     message.textContent = "You are now logged out. To login again, click ";
     message.id = "logout-message";
