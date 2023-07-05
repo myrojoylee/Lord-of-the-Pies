@@ -2,23 +2,22 @@
 <section class="columns">
 <aside class="column is-one-third"></aside>
 <section class="column is-one-third"> 
-[<span id="numbered-post">{{id}}</span>]{{name}}
-<span id="current-user">{{user_id}}</span>
+{{!-- [<span id="numbered-post">{{id}}</span>]{{name}}
+<span id="current-user">{{user_id}}</span> --}}
 
 <div class="edit">
   <div class="has-text-centered">
-    <h1 class="title is-underlined has-text-center">Edit Post</h1>
+    <h1 class="title is-underlined has-text-center">Edit Recipe</h1>
     </div>
     <div class="new-post-form field">
-        <label class="label subtitle" for="recipe-title">Post Title:</label>
+        <label class="label subtitle" for="recipe-title">Recipe Name:</label>
         <div class="control">
-        <input
+        <textarea
           class="form-input input"
           type="text"
           id="update-name"
           name="update-name"
-        ></input>
-        </div>
+        >{{name}}</textarea>
       </div>
       <div class="field">
         <label class="label subtitle" for="recipe-detail">Type details below:</label>
@@ -44,7 +43,7 @@
 
 
 
-    <h1 class="title has-text-centered">Add a comment!</h1>
+    {{!-- <h1 class="title has-text-centered">Add a comment!</h1>
      <div class="field">
 
       <label class="form-detail label" for="comment-detail">Add your comment below:</label>
@@ -59,7 +58,7 @@
         class="submitCommentBtn button is-fullwidth mt-2 mb-2 is-rounded"
         data-id="{{recipe.id}}"
       >Submit your comment</button>
-    </form>
+    </form> --}}
    {{#if comments.length}}
     <h3 class="title">{{comments.length}} Comments:</h3>
     
@@ -86,5 +85,5 @@
 <aside class="column is-one-third"></aside>
 </section>
 <script src="/js/recipe.js"></script>
-<script src="/js/comment.js"></script>
+{{!-- <script src="/js/comment.js"></script> --}}
 
