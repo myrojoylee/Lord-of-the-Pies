@@ -59,15 +59,6 @@ main {
   background-color: #90eef6;
 }
 
-/* .cardwidth {
-  min-width: 500px;
-  min-height: 700px; 
-} fucking with making card sizes responsive*/
-
-/* .candybody {
-  background-color: #e4a0d6;
-} fucking with column colors*/
-
 .recipe-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

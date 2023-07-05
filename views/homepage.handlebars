@@ -2,19 +2,20 @@
 {{!-- <aside class="column is-one-quarter"></aside> --}}
 {{!-- <main class="column"> --}}
 
-  <h3 class="title has-text-centered mt-2">
+  <h3 class="title has-text-centered mt-4">
   There are
     {{recipes.length}}
     recipes in your feed!
   </h3>
 {{user.id}}
 <!--need to figure out these flex classes-->
-
+<section  class="message-parent">
   <div id="recipes" class="recipe-list">
     {{#each recipes as |recipe|}}
         {{> recipe-card}}
     {{/each}}
   </div>
+</section>
 
 {{!-- </main> --}}
 {{!-- <aside class="column is-one-quarter"> --}}
