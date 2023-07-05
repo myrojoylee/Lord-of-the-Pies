@@ -7,31 +7,6 @@
 <div class="recipe-list">
 {{#each recipes as |recipe|}}
 {{> recipe-card}}
-  {{!-- <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="{{recipe.filename}}" alt="{{recipe.alt_text}}">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-36x36">
-          <img src="../images/pietest.png" alt="basic pie image">
-        </figure>
-      </div>
-      <div class="media-content">
-        <a href="/recipe/{{recipe.id}}">
-          <h4 class="rec-name title">{{recipe.name}}</h4>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="card-content">
-    <p class="subtitle is-6">{{recipe.detail}}</p>
-  </div>
-  <p>Posted on {{format_date created_on}}</p>
-</div>
-</div> --}}
 
 {{/each}}
 </div>
