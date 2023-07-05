@@ -39,21 +39,25 @@ const updateRecipeHandler = async (event) => {
     window.location.toString().split("/").length - 1
   ];
 
-  const response = await fetch(`/api/recipes/${id}`, {
-    method: "PUT",
-    body: JSON.stringify({
-      name,
-      detail,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  if (name && detail) {
+    const response = await fetch(`/api/recipes/${id}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        name,
+        detail,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-  if (response.ok) {
-    document.location.replace(`/profile`);
+    if (response.ok) {
+      document.location.replace(`/profile`);
+    } else {
+      alert("Failed to edit recipe");
+    }
   } else {
-    alert("Failed to edit recipe");
+    alert("Must fill in all fields!");
   }
 };
 
