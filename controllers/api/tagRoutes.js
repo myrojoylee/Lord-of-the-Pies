@@ -1,12 +1,12 @@
 //TO DO:
-// require Tag, Recipe, and RecipeTag model DONE
+// require Tag, Recipe, and RecipeTag model DONE (group needs to check)
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Tag } = require("../../models");
 const { Recipe } = require("../../models");
 const { RecipeTag } = require("../../models");
 
-// GET to find all tags DONE
+// GET to find all tags DONE (group needs to check)
 router.get("/", withAuth, async (req, res) => {
   try {
     const tagData = await RecipeTag.findAll(
@@ -22,6 +22,7 @@ router.get("/", withAuth, async (req, res) => {
 // GET to find a single tag
 // make sure to include associated Recipe model
 // using RecipeTag as a through table
+// DONE (group needs to check)
 router.get('/:id', withAuth, async (req, res) => {
   try {
       const tagData = await RecipeTag.findByPk(req.params.id, {
