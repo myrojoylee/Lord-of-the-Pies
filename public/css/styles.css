@@ -91,6 +91,11 @@ main {
   color: transparent;
 } */
 
+.navbar-dropdown {
+  display: block;
+}
+
+
 @media screen and (max-width: 767px) {
   .recipe-list {
     grid-template-columns: 1fr;
@@ -103,3 +108,5 @@ main {
     display: block;
   }
 }
+
+
