@@ -1,12 +1,12 @@
 //TO DO:
-// require Tag, Recipe, and RecipeTag model
+// require Tag, Recipe, and RecipeTag model DONE
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Tag } = require("../../models");
 const { Recipe } = require("../../models");
 const { RecipeTag } = require("../../models");
 
-// GET to find all tags
+// GET to find all tags DONE
 router.get("/", withAuth, async (req, res) => {
   try {
     const tagData = await RecipeTag.findAll(
