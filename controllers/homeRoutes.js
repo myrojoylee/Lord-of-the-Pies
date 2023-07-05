@@ -1,11 +1,12 @@
+// Call required dependencies, models and middleware
 const router = require("express").Router();
 const { User, Recipe, Comment, Tag, RecipeTag } = require("../models");
 const withAuth = require("../utils/auth");
 
-// renders homepage
+// Route that renders homepage
 router.get("/", async (req, res) => {
   try {
-    // TO DO: specify attributes so that we can
+    // specify attributes so that we can
     // render recipe name, recipe detail
     const recipeData = await Recipe.findAll({
       include: [
@@ -27,7 +28,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// TO DO: create route for user profile.
+// Route to print out user profile.
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -50,7 +51,7 @@ router.get("/profile", withAuth, async (req, res) => {
   }
 });
 
-// TO DO: create route for recipe by id.
+// Route to print out recipes by id and their following comments.
 router.get("/recipe/:id", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
@@ -97,10 +98,10 @@ router.get("/recipe/:id", withAuth, async (req, res) => {
   }
 });
 
-// route for new recipe creation
+// route to print out new recipe creation page
 router.get("/new-recipe", withAuth, async (req, res) => {
   try {
-    // Find the logged in blogger based on the session ID
+    // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Recipe }],
@@ -119,7 +120,7 @@ router.get("/new-recipe", withAuth, async (req, res) => {
   }
 });
 
-// TO DO: create route for login
+// Route to print out login page
 router.get("/login", (req, res) => {
   try {
     if (req.session.logged_in) {
@@ -131,7 +132,7 @@ router.get("/login", (req, res) => {
     res.status(500).json(err);
   }
 });
-// TO DO: create route to sign up
+// Route to print out sign up page
 router.get("/signup", (req, res) => {
   try {
     res.render("signup");
@@ -139,6 +140,6 @@ router.get("/signup", (req, res) => {
     res.status(500).json(err);
   }
 });
-//do this
 
+// Export Router
 module.exports = router;
