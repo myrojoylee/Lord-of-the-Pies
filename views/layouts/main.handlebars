@@ -17,38 +17,40 @@
   <body>
     <section class="hero is-medium candyhead">
       <div class="hero-head">
-        <nav class="navbar is-active">
+        <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item pie-parent">
                 <img id="pie" src="../../images/pietest.png" alt="pie logo" />
               </a>
               <p class="navbar-item" id="direction"> Click on the pie!</p>
-              <span class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
             </div>
             <div class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active" href="/">
+                <div class="navbar-item has-dropdown is-hoverable">
+                <p class="navbar-item is-underlined">
+                  Menu
+                </p>
+                <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="/">
                   Home
                 </a>
                 {{#if logged_in}}
-                 <a class="navbar-item is-active" href="/profile"><span id="profile-name" >{{user_name}}</span>'s Profile
+                <a class="navbar-item" href="/profile"><span id="profile-name" >{{user_name}}</span>'s Profile
                   </a>
                   <button
-                    class="no-button navbar-item is-active"
+                    class="no-button navbar-item"
                     id="logout"
                   >Logout</button>
                 {{else}}
-                  <a class="navbar-item is-active" href="/login">
+                  <a class="navbar-item" href="/login">
                     Login
                   </a>
-                  <a class="navbar-item is-active" href="/signup">
+                  <a class="navbar-item" href="/signup">
                     Signup
                   </a>
+                  </div>
+                  </div>
                 {{/if}}
               </div>
             </div>
@@ -90,3 +92,4 @@
 {{> chat}}
   <script src="/js/logout.js"></script>
 {{/if}}
+<script src="/js/burger.js"></script>
