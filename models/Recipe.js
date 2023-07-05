@@ -54,5 +54,5 @@ Recipe.init(
   }
 );
 
-// Export recipe
+// Export Recipe
 module.exports = Recipe;
