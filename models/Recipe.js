@@ -1,10 +1,14 @@
+// import important parts of sequelize library
 const { Model, DataTypes } = require("sequelize");
+// import our database connection from config folder
 const sequelize = require("../config/connection");
 
+// Initialize Recipe model by extending off Sequelize's Model Class
 class Recipe extends Model {}
 
 Recipe.init(
   {
+    // define columns for Recipe model
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -32,6 +36,7 @@ Recipe.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    // references user model by it's id 
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -49,4 +54,5 @@ Recipe.init(
   }
 );
 
+// Export Recipe
 module.exports = Recipe;
