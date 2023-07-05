@@ -15,8 +15,10 @@
         <a href="/recipe/{{id}}">
           <h3 class="rec-name title">[<span>{{id}}</span>] {{name}}</h3>
         </a>
-        <p class="blog-author subtitle">Posted by
-          {{user.username}}</p>
+        {{#if logged_in}}
+          <p class="blog-author subtitle">Posted by
+            {{user.username}}</p>
+        {{/if}}
       </div>
     </div>
   </div>

@@ -1,8 +1,11 @@
+// Call/import dependencies: dotenv and sequelize
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
 let sequelize;
 
+// Create a connection object to connect to database with mysql
+// utilize process.env to bring in environmental variables with login info
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
@@ -18,4 +21,5 @@ if (process.env.JAWSDB_URL) {
   );
 }
 
+// export sequelize
 module.exports = sequelize;

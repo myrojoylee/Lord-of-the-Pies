@@ -1,6 +1,9 @@
+// selecting an element through DOM and setting it to variable
 const messageParent = document.querySelector(".message-parent");
+// Setting a time variable for message timeout
 let time = 5;
 
+// async function to add logout functionality
 const logout = async () => {
   const response = await fetch("/api/users/logout", {
     method: "POST",
@@ -8,7 +11,8 @@ const logout = async () => {
   });
 
   if (response.ok) {
-    // document.location.replace("/");
+    document.location.replace("/");
+    // create a message with logout
     const message = document.createElement("h2");
     message.textContent = "You are now logged out. To login again, click ";
     message.id = "logout-message";
@@ -20,10 +24,12 @@ const logout = async () => {
     link.textContent = "here.";
     link.style.color = "blue";
 
+    // append it to the parent element
     messageParent.appendChild(message);
     messageParent.appendChild(link);
     console.log(messageParent)
 
+    // set a timer interval to have message time out
     let timerInterval = setInterval(function() {
       time--;
       if (time === 0) {
@@ -40,5 +46,5 @@ const logout = async () => {
 };
 
 
-// change the id here if you use a different one in the html
+// event listener to add function to logout button
 document.querySelector("#logout").addEventListener("click", logout);
