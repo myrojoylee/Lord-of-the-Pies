@@ -4,7 +4,9 @@ const commentFormHandler = async (event) => {
 
   const detail = document.querySelector("#comment-detail").value;
   const user_id = document.querySelector("#current-user").textContent;
-  const recipe_id = document.querySelector("#numbered-post").textContent;
+  const recipe_id = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
 
   console.log(`hey`);
   if (detail) {
@@ -14,10 +16,10 @@ const commentFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    const id = window.location.toString().split("/")[
-      window.location.toString().split("/").length - 1
-    ];
-    console.log(id);
+    // const id = window.location.toString().split("/")[
+    //   window.location.toString().split("/").length - 1
+    // ];
+    // console.log(id);
     if (response.ok) {
       window.location.reload();
     } else {
