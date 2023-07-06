@@ -14,6 +14,13 @@ router.get("/", async (req, res) => {
           model: User,
           attributes: ["username"],
         },
+        {
+          model: Tag,
+            through: {
+              model: RecipeTag,
+              attributes: ["id", "tag_id", "recipe_id"]
+            }
+        }
       ],
     });
 
