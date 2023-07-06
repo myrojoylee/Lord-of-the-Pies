@@ -1,6 +1,8 @@
+// Call required dependencies and seed file
 const router = require('express').Router();
 const seedDb = require('../../seeds/seed');
 
+// This POST route will help to seed our database in Heroku
 router.post("/", async (req, res)=> {
   if(req.body.password === process.env.SEED_PASSWORD){
     await seedDb();
@@ -12,4 +14,5 @@ router.post("/", async (req, res)=> {
   
 });
 
+// Export router
 module.exports = router;
