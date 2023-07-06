@@ -1,56 +1,51 @@
 <!--Aub note, going to add view of post here -->
-<section class="columns">
-  <aside class="column is-one-third"></aside>
-  <section class="column is-one-third">
-    {{!-- [<span id="numbered-post">{{id}}</span>]{{name}}
-<span id="current-user">{{user_id}}</span> --}}
+<section class="login-signup">
 
-    <div class="edit">
-      <div class="has-text-centered">
-        <h1 class="title is-underlined has-text-center">Edit Recipe</h1>
-      </div>
+  <div class="has-text-centered">
+    <h1 class="title is-underlined has-text-center">Edit Recipe</h1>
+  </div>
 
-      <form class="new-post-form field">
-        <label class="label subtitle" for="recipe-title">Recipe Name:</label>
-        <div class="control">
-          <textarea
-            class="form-input input"
-            type="text"
-            id="update-name"
-            name="update-name"
-          >{{name}}</textarea>
-        </div>
-      </form>
-      <form class="field">
-        <label class="label subtitle" for="recipe-detail">Type details below:</label>
-        <div class="control">
-          <textarea
-            class="update-detail textarea is-small"
-            row="5"
-            id="update-detail"
-            name="update-detail"
-          >{{detail}}</textarea>
-        </div>
-      </form>
+  <form class="new-post-form field">
+    <label class="label subtitle" for="recipe-title">Recipe Name:</label>
+    <div class="control">
+      <textarea
+        class="form-input input"
+        type="text"
+        id="update-name"
+        name="update-name"
+      >{{name}}</textarea>
+    </div>
+  </form>
+  <form class="field">
+    <label class="label subtitle" for="recipe-detail">Type details below:</label>
+    <div class="control">
+      <textarea
+        class="update-detail textarea is-small"
+        row="5"
+        id="update-detail"
+        name="update-detail"
+      >{{detail}}</textarea>
+    </div>
+  </form>
 
-      <form class="update-delete field is-grouped columns">
-        <div class="control column">
-          <button
-            class="button is-rounded is-fullwidth"
-            id="updateBtn"
-            data-id="{{id}}"
-          >UPDATE</button>
-        </div>
-        <div class="control column">
-          <button
-            class="button is-rounded is-fullwidth is-danger"
-            id="deleteBtn"
-            data-id="{{id}}"
-          >DELETE</button>
-        </div>
-      </form>
+  <form class="update-delete field is-grouped columns">
+    <div class="control column">
+      <button
+        class="button is-rounded is-fullwidth"
+        id="updateBtn"
+        data-id="{{id}}"
+      >UPDATE</button>
+    </div>
+    <div class="control column">
+      <button
+        class="button is-rounded is-fullwidth is-danger"
+        id="deleteBtn"
+        data-id="{{id}}"
+      >DELETE</button>
+    </div>
+  </form>
 
-      {{!-- <h1 class="title has-text-centered">Add a comment!</h1>
+  {{!-- <h1 class="title has-text-centered">Add a comment!</h1>
      <div class="field">
 
       <label class="form-detail label" for="comment-detail">Add your comment below:</label>
@@ -66,30 +61,27 @@
         data-id="{{recipe.id}}"
       >Submit your comment</button>
     </form> --}}
-      {{#if comments.length}}
-        <h3 class="title">{{comments.length}} Comments:</h3>
+  {{#if comments.length}}
+    <h3 class="title">{{comments.length}} Comments:</h3>
 
-        {{#each comments as |comment|}}
-          <article class="card comment mt-2">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="card-detail subtitle" id="comment"><strong>
-                      {{comment.user.username}}</strong>
-                    says:
-                  </p>
-                  <p class="card-detail">{{detail}}</p>
-                </div>
-              </div>
+    {{#each comments as |comment|}}
+      <article class="card comment mt-2">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="card-detail subtitle" id="comment"><strong>
+                  {{comment.user.username}}</strong>
+                says:
+              </p>
+              <p class="card-detail">{{detail}}</p>
             </div>
-          </article>
-        {{/each}}
+          </div>
+        </div>
+      </article>
+    {{/each}}
 
-      {{/if}}
+  {{/if}}
 
-    </div>
-  </section>
-  <aside class="column is-one-third"></aside>
 </section>
 <script src="/js/recipe.js"></script>
 {{! <script src="/js/comment.js"></script> }}

@@ -12,19 +12,13 @@ body {
   width: 100%;
 }
 
-/* main {
+main {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  min-height: 50vh;
-} */
-
-/* .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 2em;
-  gap: 1em;
-} */
+  align-items: center;
+  padding: 3em 2em 5em;
+  width: 100%;
+}
 
 .search-bar {
   display: flex;
@@ -33,7 +27,7 @@ body {
 }
 
 .login-signup {
-  width: 100%;
+  width: 50%;
 }
 
 footer {
@@ -66,7 +60,7 @@ footer {
 .recipe-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 2em;
+  padding: 2em 1em;
   gap: 1em;
 }
 
@@ -110,6 +104,10 @@ footer {
 @media screen and (max-width: 767px) {
   .recipe-list {
     grid-template-columns: 1fr;
+  }
+
+  .login-signup {
+    width: 100%;
   }
   #searchRecipe {
     font-size: 1.25em;
