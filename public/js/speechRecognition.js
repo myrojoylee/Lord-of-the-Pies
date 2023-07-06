@@ -24,11 +24,11 @@ const logging = () => {
     // button.textContent = speechToText;
     document.querySelector("body").style.backgroundColor = speechToText;
     direction.textContent = `Click to try again`;
-    // if (speechToText === "profile") {
-    //   document.querySelector("button").textContent = `Redirecting to profile!`;
-    //   setTimeout(() => {
-    //     window.location.href = "/profile";
-    //   }, "1000");
-    // }
+    if (speechToText === "profile") {
+      direction.textContent = `Redirecting to profile!`;
+      setTimeout(() => {
+        window.location.href = "/profile";
+      }, "1000");
+    }
   };
 };
