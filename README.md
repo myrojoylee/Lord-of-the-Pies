@@ -9,6 +9,10 @@ WIP, follow progress below:
 GIVEN that the main CRUD functionality of the site is already accomplished:
 
 ### TASK LIST
+- [  ] Refactor views to match semantic structure (jimmy)
+- [  ] Comment through the code: seeds and public folder (jimmy)
+- [  ] Check PPT so it's updated for LOTP's
+
 
 #### Models
 
