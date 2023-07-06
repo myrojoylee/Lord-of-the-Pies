@@ -1,25 +1,16 @@
 <!--Aub note: figure out how to show a please log in message instead of recipies -->
-{{!-- <aside class="column is-one-quarter"></aside> --}}
-{{!-- <main class="column"> --}}
 
-  <h3 class="title has-text-centered mt-4">
+<h3 class="title has-text-centered mt-4">
   There are
-    {{recipes.length}}
-    recipes in your feed!
-  </h3>
+  {{recipes.length}}
+  recipes in your feed!
+</h3>
 {{user.id}}
-<!--need to figure out these flex classes-->
-<section  class="message-parent">
+{{> search}}
+<section class="message-parent">
   <div id="recipes" class="recipe-list">
-    {{#each recipes as |recipe|}}
-        {{> recipe-card}}
-    {{/each}}
+
   </div>
 </section>
 
-{{!-- </main> --}}
-{{!-- <aside class="column is-one-quarter"> --}}
-
-{{!-- <script src="/js/search.js"></script> --}}
-
-
+<script src="/js/search.js"></script>

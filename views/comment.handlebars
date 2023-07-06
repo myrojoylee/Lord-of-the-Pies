@@ -1,37 +1,39 @@
-<section class="columns">
-<aside class="column is-one-third"></aside>
-<section class="column is-one-third">
-<div class="card mt-3">
-  <div class="card-image">
-    <figure class="image is-3by3">
-      <img src="{{filename}}" alt="{{alt_text}}" />
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-36x36">
-          <img src="../../images/pietest.png" alt="basic pie image" />
-        </figure>
-      </div>
-      <div class="media-content">
-        <a href="/recipe/{{id}}">
-          <h3 class="rec-name title">[<span>{{id}}</span>] {{name}}</h3>
-        </a>
-        <p class="blog-author subtitle">Posted by
-          {{user.username}}</p>
+<section class="login-signup">
+  <p id="current-user">{{user_id}}</p>
+  <div class="card mt-3">
+    <div class="card-image">
+      <figure class="image is-3by3">
+        <img src="{{filename}}" alt="{{alt_text}}" />
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-36x36">
+            <img src="../../images/pietest.png" alt="basic pie image" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <a href="/recipe/{{id}}">
+            <h3 class="rec-name title">[<span>{{id}}</span>] {{name}}</h3>
+          </a>
+          <p class="blog-author subtitle">Posted by
+            {{user.username}}</p>
+        </div>
       </div>
     </div>
+    <div class="card-content">
+      <p class="subtitle">{{recipe.detail}}</p>
+    </div>
+    <p>Posted on {{format_date created_on}}</p>
   </div>
-  <div class="card-content">
-    <p class="subtitle">{{recipe.detail}}</p>
-  </div>
-  <p>Posted on {{format_date created_on}}</p>
-</div>
 
   <div class="field">
 
-    <label class="form-detail label has-text-centered mt-2" for="comment-detail">Type your comment below:</label>
+    <label
+      class="form-detail label has-text-centered mt-2"
+      for="comment-detail"
+    >Type your comment below:</label>
     <textarea
       class="form-detail textarea"
       id="comment-detail"
@@ -47,26 +49,24 @@
   {{! renders list of comments if they exist }}
   {{#if comments.length}}
     <h3 class="subtitle">{{comments.length}} Comments:</h3>
-    
-      {{#each comments as |comment|}}
+
+    {{#each comments as |comment|}}
       <article class="card comment mt-2">
-          <div class="card-content">
-            <div class="media">
+        <div class="card-content">
+          <div class="media">
             <div class="media-content">
-          <p class="card-detail subtitle" id="comment"><strong>
-            {{comment.user.username}}</strong>
-            says:
-          </p>
-          <p class="card-detail">{{detail}}</p>
-          </div>
+              <p class="card-detail subtitle" id="comment"><strong>
+                  {{comment.user.username}}</strong>
+                says:
+              </p>
+              <p class="card-detail">{{detail}}</p>
+            </div>
           </div>
         </div>
-        </article>
-      {{/each}}
-    
+      </article>
+    {{/each}}
+
   {{/if}}
 </section>
-</section>
-<aside class="column is-one-third"></aside>
-</section>
+
 <script src="/js/comment.js"></script>

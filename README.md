@@ -9,6 +9,10 @@ WIP, follow progress below:
 GIVEN that the main CRUD functionality of the site is already accomplished:
 
 ### TASK LIST
+- [  ] Refactor views to match semantic structure (jimmy)
+- [  ] Comment through the code: seeds and public folder (jimmy)
+- [  ] Check PPT so it's updated for LOTP's
+
 
 #### Models
 
@@ -21,13 +25,13 @@ GIVEN that the main CRUD functionality of the site is already accomplished:
 - [ x ] Login page has a button that leads to signing up for those who are new - Aubrey
 - [ x ] Sign up page has a button that leads to logging in for returning users. - Aubrey
 - [ ] Once logged out, page says "You are logged out, click here to log in again"
-- [ ] Hamburger menu to expand upon clicking - Aubrey
+- [ ] Drop down menu needs to work for mobile and desktop - Aubrey
 - [ x ] Homepage: 3 or 4 recipe cards in one row on desktop, 1 each on mobile 
 - [ x ] Homepage: Recipe card should contain title, photo (details only when you click)
 
 #### Extras
 
-- [ ] Optimize mobile responsiveness
+- [ ] Optimize mobile responsiveness (if possible, replace aside with flexbox)
 
 ## Installation
 

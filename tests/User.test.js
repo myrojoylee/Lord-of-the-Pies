@@ -1,6 +1,8 @@
+// Call required dependencies and models
 const sequelize = require("../config/connection");
 const User = require("../models/User.js");
 
+// test to make sure user input is not null
 test("Checks for null values", async () => {
   const user1 = {};
 
@@ -17,6 +19,7 @@ test("Checks for null values", async () => {
   await expect(newUser2.validate()).resolves.not.toThrow();
 });
 
+// test to make sure user password is 8 characters or more
 test("Checks for short passwords", async () => {
   const user1 = {
     username: "test",
@@ -39,6 +42,7 @@ test("Checks for short passwords", async () => {
   await expect(newUser2.validate()).resolves.not.toThrow();
 });
 
+// test to make sure username is only alphanumeric
 test("Checks for alphanumeric username", async () => {
   const user1 = {
     username: "test_123",
@@ -48,7 +52,7 @@ test("Checks for alphanumeric username", async () => {
 
   const user2 = {
     username: "test",
-    email: "test@test.com",
+    email: "test!@test.com",
     password: "password123",
   };
 

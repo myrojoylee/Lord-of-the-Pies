@@ -1,3 +1,5 @@
+/* Master style sheet for handlebars template engine */
+
 a:visited,
 a:active,
 a:link {
@@ -5,30 +7,33 @@ a:link {
   text-decoration: none;
 }
 body {
+  display: flex;
+  flex-direction: column;
   background-color: pink;
   min-height: 100vh;
-}
-
-main {
-  /* display: flex;
-  flex-direction: column;
-  align-content: center; */
-  min-height: 50vh;
-}
-
-/* .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 2em;
-  gap: 1em;
-} */
-
-.login-signup {
   width: 100%;
 }
 
-.footer {
-  margin-top: 0;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 2em 5em;
+  width: 100%;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-signup {
+  width: 50%;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .takespaceL {
@@ -49,20 +54,15 @@ main {
   background-color: white;
 }
 
-/* .add-new-recipe {
-  background-color: blueviolet;
-  width: 100px;
-  border-radius: 0.25em;
-} */
-
 .candyhead {
   background-color: #90eef6;
+  padding: 2em 0;
 }
 
 .recipe-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 2em;
+  padding: 2em 1em;
   gap: 1em;
 }
 
@@ -77,9 +77,21 @@ main {
   padding-left: 1em;
 }
 
+.addRecBtn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .recipe-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #searchRecipe {
+    font-size: 1.25em;
+    /* width: 100%; */
+    margin: 0 2em;
   }
 }
 
@@ -100,9 +112,14 @@ main {
   .recipe-list {
     grid-template-columns: 1fr;
   }
+
+  .login-signup {
+    width: 100%;
+  }
   #searchRecipe {
     font-size: 1.25em;
     width: 100%;
+    margin: 0 2em;
   }
   .tinyscreen {
     display: block;
