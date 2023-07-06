@@ -48,7 +48,7 @@ test("Checks for alphanumeric username", async () => {
 
   const user2 = {
     username: "test",
-    email: "test@test.com",
+    email: "test!@test.com",
     password: "password123",
   };
 

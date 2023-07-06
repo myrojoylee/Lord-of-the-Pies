@@ -10,7 +10,7 @@ function getBotResponse(input) {
     return "rock";
   } else if (lowercaseInput == "hello") {
     return "Hello there!";
-  } else if (lowercaseInput == "goodbye") {
+  } else if (lowercaseInput == "hi") {
     return "Talk to you later!";
   } else {
     return "I don't have an answer for that; try typing something else!";
