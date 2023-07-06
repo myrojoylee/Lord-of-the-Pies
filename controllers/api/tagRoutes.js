@@ -1,13 +1,10 @@
-//TO DO:
-// require Tag, Recipe, and RecipeTag model DONE
+// Call required dependencies, models and middleware
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
-const { Tag } = require("../../models");
-const { Recipe } = require("../../models");
-const { RecipeTag } = require("../../models");
-// lines 5-7 can be all one line
+const { Tag, Recipe, RecipeTag } = require("../../models");
 
-// GET to find all tags DONE
+
+// This GET route finds all tags
 router.get("/", withAuth, async (req, res) => {
   try {
     const tagData = await Tag.findAll()
@@ -17,10 +14,8 @@ router.get("/", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-// GET to find a single tag
-// make sure to include associated Recipe model
-// using RecipeTag as a through table
-// DONE
+
+// This GET route finds tags by their id
 router.get('/:id', withAuth, async (req, res) => {
   try {
       const tagData = await Tag.findByPk(req.params.id, {
@@ -41,4 +36,5 @@ router.get('/:id', withAuth, async (req, res) => {
   }
 });
 
+// Export router
 module.exports = router;
