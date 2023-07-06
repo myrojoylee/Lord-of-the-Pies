@@ -1,8 +1,9 @@
+// Call required dependencies, models and middleware
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Recipe, User } = require("../../models");
 
-//TO DO: POST route to create a new recipe
+//This GET route finds all recipes
 router.get("/", async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -19,6 +20,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+// This GET route finds recipes by their id
 router.get("/:id", async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
@@ -35,6 +37,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+//This POST route create a new recipe
 router.post("/", withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
@@ -49,7 +52,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-// updating a recipe by id
+// This PUT route updates a specific recipe by it's id
 router.put("/:id", withAuth, async (req, res) => {
   try {
     const updatedRecipeData = await Recipe.update(
@@ -76,6 +79,7 @@ router.put("/:id", withAuth, async (req, res) => {
   }
 });
 
+// This DELETE route deletes a recipe by id
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
@@ -96,4 +100,5 @@ router.delete("/:id", withAuth, async (req, res) => {
   }
 });
 
+// Export router
 module.exports = router;
