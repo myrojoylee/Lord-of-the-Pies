@@ -1,10 +1,9 @@
+// Call required dependencies, models and middleware
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { Comment } = require("../../models");
 
-// TO DO: GET route to find all comments
-// Remember to initialize session variables
-// of data we need later
+// This GET route finds all the comments
 router.get('/', withAuth, async (req, res) => {
     try {
         const commentData = await Comment.findAll();
@@ -17,7 +16,7 @@ router.get('/', withAuth, async (req, res) => {
 
 });
 
-// TO DO: GET route to find a comment by id
+// This GET route finds comments by it's id
 router.get('/:id', withAuth, async (req, res) => {
     try {
         const commentData = await Comment.findByPk(req.params.id);
@@ -29,7 +28,7 @@ router.get('/:id', withAuth, async (req, res) => {
     }
 });
 
-// TO DO: POST route to create a new comment
+// This POST route creates a new comment
 router.post('/', withAuth, async (req, res) => {
     try {
         const newComment = await Comment.create({
@@ -44,4 +43,5 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+// Export router
 module.exports = router;
