@@ -35,7 +35,6 @@ const newRecipeHandler = async (event) => {
     );
   }
 };
-// const cloudinaryWidgetHandler
 
 document
   .querySelector(".new-recipe-form")

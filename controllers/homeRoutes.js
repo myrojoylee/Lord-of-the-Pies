@@ -2,6 +2,7 @@
 const router = require("express").Router();
 const { User, Recipe, Comment, Tag, RecipeTag } = require("../models");
 const withAuth = require("../utils/auth");
+require("dotenv").config();
 
 // Route that renders homepage
 router.get("/", async (req, res) => {
@@ -16,11 +17,11 @@ router.get("/", async (req, res) => {
         },
         {
           model: Tag,
-            through: {
-              model: RecipeTag,
-              attributes: ["id", "tag_id", "recipe_id"]
-            }
-        }
+          through: {
+            model: RecipeTag,
+            attributes: ["id", "tag_id", "recipe_id"],
+          },
+        },
       ],
     });
 
@@ -121,6 +122,7 @@ router.get("/new-recipe", withAuth, async (req, res) => {
       logged_in: true,
       logged_in: req.session.logged_in,
       user_name: req.session.user_name,
+      upload_preset: process.env.CLOUDINARY_PRESET,
     });
   } catch (err) {
     res.status(500).json(err);
