@@ -28,10 +28,11 @@ function getTime() {
     minutes = `0${minutes}`; // 05:19
   }
 
+  // Variable "time" interpolated 
   let time = `${hours}:${minutes}`;
   return time;
 }
-
+// Introduction message from "Daisy" the ChatBot
 function firstBotMessage() {
   let y = getUsername();
   let firstMessage = `Hi ${y}! I am Daisy, your Virtual Assistant! How are you today?`;
@@ -39,6 +40,7 @@ function firstBotMessage() {
     "botStarterMessage"
   ).innerHTML = `<p class="botText"><span>${firstMessage}</span></p>`;
 
+// Time-stamp code 
   let time = getTime();
   const timeStamp = document.querySelector("#chat-timestamp");
   timeStamp.append(time);
@@ -65,6 +67,7 @@ function getResponse() {
     userText = `Save the Pandas!`;
   }
 
+// User text is interpolated into the following HTML, where it is styled through the userText class
   let userHtml = `<p class="userText"><span>${userText}</span></p>`;
 
   document.querySelector("#textInput").value = "";

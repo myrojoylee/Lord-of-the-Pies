@@ -1,5 +1,6 @@
 botResponseArray: ["Interesting...go on...", " "];
 
+// Added just in case user feels like losing in rock-paper-scissors
 function getBotResponse(input) {
   let lowercaseInput = input.toLowerCase();
   if (lowercaseInput == "rock") {

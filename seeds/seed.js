@@ -1,3 +1,5 @@
+//Exports and variables required for seeds
+
 const sequelize = require("../config/connection");
 const { User, Recipe, Comment } = require("../models");
 
