@@ -21,19 +21,26 @@
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
+            <input id="menu-switch" name="menu-switch" type="checkbox"/>
             <div class="navbar-brand">
               <a class="navbar-item pie-parent">
                 <img id="pie" src="../../images/pietest.png" alt="pie logo" />
               </a>
               <p class="navbar-item fancy title" id="direction"> Click on the pie!</p>
             </div>
+            
+                <div class="navbar-brand">
+                  <p class="navbar-item is-underlined fancy title secret">
+                      Menu
+                    </p>
+          <label for="menu-switch" class="navbar-burger" role="button" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </label>
+      </div>
             <div class="navbar-menu">
               <div class="navbar-end">
-                <div class="navbar-item has-dropdown is-hoverable">
-                <p class="navbar-item is-underlined fancy title">
-                  Menu
-                </p>
-                <div class="navbar-dropdown is-boxed">
                 <a class="navbar-item fancy" href="/">
                   Home
                 </a>
@@ -51,8 +58,6 @@
                   <a class="navbar-item fancy" href="/signup">
                     Signup
                   </a>
-                  </div>
-                  </div>
                 {{/if}}
               </div>
             </div>
