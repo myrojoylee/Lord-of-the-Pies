@@ -77,7 +77,7 @@ const deleteRecipeHandler = async (event) => {
   }
 };
 
-// make sure this matches html
+
 document
   .querySelector("#updateBtn")
   .addEventListener("click", updateRecipeHandler);
