@@ -1,6 +1,6 @@
 <section class="login-signup">
   <p id="current-user">{{user_id}}</p>
-  <section class="card mt-3 mb-6">
+  <section class="card mt-3">
     <div class="card-image">
       <figure class="image is-3by3">
         <img src="{{filename}}" alt="{{alt_text}}"/>
@@ -45,7 +45,7 @@
       class="submitCommentBtn button is-rounded is-fullwidth mt-2 fancy"
       data-id="{{recipe.id}}"
     >Submit your comment!</button>
-  </section>
+  </div>
   {{! renders list of comments if they exist }}
   {{#if comments.length}}
     <h3 class="subtitle">{{comments.length}} Comments:</h3>
