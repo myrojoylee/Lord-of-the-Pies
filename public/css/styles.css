@@ -40,6 +40,10 @@ main {
   width: 50%;
 }
 
+#current-user {
+  color: transparent;
+}
+
 footer {
   margin-top: auto;
 }
