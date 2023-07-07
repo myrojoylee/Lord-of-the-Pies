@@ -25,7 +25,12 @@ const logging = () => {
     document.querySelector("body").style.backgroundColor = speechToText;
     direction.textContent = `Click to try again`;
     if (speechToText === "profile") {
-      document.querySelector("button").textContent = `Redirecting to profile!`;
+      direction.textContent = `Redirecting to profile!`;
+      setTimeout(() => {
+        window.location.href = "/profile";
+      }, "1000");
+    } else if (speectToText === "surprise me") {
+      direction.textContent = `You got it!`;
       setTimeout(() => {
         window.location.href = "/profile";
       }, "1000");
