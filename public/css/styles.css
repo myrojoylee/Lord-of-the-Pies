@@ -21,6 +21,14 @@ main {
   padding: 3em 2em 5em;
   width: 100%;
 }
+.title {
+  font-family: "Space Grotesk";
+}
+
+.subtitle,
+.fancy {
+  font-family: 'Dancing Script';
+}
 
 .search-bar {
   display: flex;

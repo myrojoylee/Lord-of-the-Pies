@@ -6,7 +6,7 @@
   </div>
 
   <form class="new-post-form field">
-    <label class="label subtitle" for="recipe-title">Recipe Name:</label>
+    <label class="label subtitle fancy" for="recipe-title">Recipe Name:</label>
     <div class="control">
       <textarea
         class="form-input input"
@@ -17,7 +17,7 @@
     </div>
   </form>
   <form class="field">
-    <label class="label subtitle" for="recipe-detail">Type details below:</label>
+    <label class="label subtitle fancy" for="recipe-detail">Type details below:</label>
     <div class="control">
       <textarea
         class="update-detail textarea is-small"
@@ -31,36 +31,20 @@
   <form class="update-delete field is-grouped columns">
     <div class="control column">
       <button
-        class="button is-rounded is-fullwidth"
+        class="button is-rounded is-fullwidth fancy"
         id="updateBtn"
         data-id="{{id}}"
       >UPDATE</button>
     </div>
     <div class="control column">
       <button
-        class="button is-rounded is-fullwidth is-danger"
+        class="button is-rounded is-fullwidth is-danger fancy"
         id="deleteBtn"
         data-id="{{id}}"
       >DELETE</button>
     </div>
   </form>
 
-  {{!-- <h1 class="title has-text-centered">Add a comment!</h1>
-     <div class="field">
-
-      <label class="form-detail label" for="comment-detail">Add your comment below:</label>
-      <textarea
-        class="textarea"
-        id="comment-detail"
-        name="comment-detail"
-        placeholder="Commenting as {{user_name}}..."
-      ></textarea>
-      <button
-        type="submit"
-        class="submitCommentBtn button is-fullwidth mt-2 mb-2 is-rounded"
-        data-id="{{recipe.id}}"
-      >Submit your comment</button>
-    </form> --}}
   {{#if comments.length}}
     <h3 class="title">{{comments.length}} Comments:</h3>
 
@@ -69,11 +53,11 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <p class="card-detail subtitle" id="comment"><strong>
+              <p class="card-detail subtitle fancy" id="comment"><strong>
                   {{comment.user.username}}</strong>
                 says:
               </p>
-              <p class="card-detail">{{detail}}</p>
+              <p class="card-detail fancy">{{detail}}</p>
             </div>
           </div>
         </div>
