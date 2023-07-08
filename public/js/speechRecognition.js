@@ -29,7 +29,7 @@ const logging = () => {
       setTimeout(() => {
         window.location.href = "/profile";
       }, "1000");
-    } else if (speectToText === "surprise me") {
+    } else if (speechToText === "surprise me") {
       direction.textContent = `You got it!`;
       setTimeout(() => {
         window.location.href = "/profile";
