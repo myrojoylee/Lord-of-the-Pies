@@ -1,3 +1,4 @@
+// initiating speech recognition object to utilize web speech API
 const SpeechRecognition =
   window.webkitSpeechRecognition || window.SpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -29,7 +30,7 @@ const logging = () => {
       setTimeout(() => {
         window.location.href = "/profile";
       }, "1000");
-    } else if (speectToText === "surprise me") {
+    } else if (speechToText === "surprise me") {
       direction.textContent = `You got it!`;
       setTimeout(() => {
         window.location.href = "/profile";

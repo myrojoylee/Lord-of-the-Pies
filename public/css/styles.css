@@ -24,6 +24,7 @@ main {
 
 .secret {
   display: hidden;
+  color: transparent !important;
 }
 
 .navbar-menu {
@@ -36,7 +37,7 @@ main {
 
 .subtitle,
 .fancy {
-  font-family: 'Dancing Script';
+  font-family: "Dancing Script";
 }
 
 .search-bar {
@@ -128,7 +129,6 @@ footer {
   display: block;
 }
 
-
 @media screen and (max-width: 767px) {
   .recipe-list {
     grid-template-columns: 1fr;
@@ -146,5 +146,3 @@ footer {
     display: block;
   }
 }
-
-

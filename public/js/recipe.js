@@ -1,15 +1,10 @@
+// handles input from new recipe form
 const newRecipeHandler = async (event) => {
   event.preventDefault();
 
-  // trim() removes any extraneous spaces before
-  // and after user entry.
   const name = document.querySelector("#recipe-name").value.trim();
   const detail = document.querySelector("#recipe-detail").value.trim();
 
-  // will only create the  new recipe if all
-  // fields are filled out
-  // make sure fields in the BODY
-  // match model definitions!!
   if (name && detail) {
     // we perform a fetch to get data from the user input
     const response = await fetch(`/api/recipes`, {
@@ -29,6 +24,7 @@ const newRecipeHandler = async (event) => {
   }
 };
 
+// handles input from updating an existing recipe
 const updateRecipeHandler = async (event) => {
   event.preventDefault();
 
@@ -61,6 +57,7 @@ const updateRecipeHandler = async (event) => {
   }
 };
 
+// handles the deleting of an existing recipe
 const deleteRecipeHandler = async (event) => {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
@@ -76,7 +73,6 @@ const deleteRecipeHandler = async (event) => {
     }
   }
 };
-
 
 document
   .querySelector("#updateBtn")
