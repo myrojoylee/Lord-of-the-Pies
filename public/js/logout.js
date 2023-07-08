@@ -29,6 +29,7 @@ const logout = async () => {
     message.textContent = "You are now logged out. To login again, click ";
     message.id = "logout-message";
     message.style.color = "black";
+    message.classList.add("title");
 
     const link = document.createElement("a");
     link.href = "/login";

@@ -5,6 +5,8 @@
     <title>Lord of the Pies</title>
     <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/chat.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Space+Grotesk:wght@400&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400&family=Work+Sans&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -19,38 +21,43 @@
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
+            <input id="menu-switch" name="menu-switch" type="checkbox"/>
             <div class="navbar-brand">
               <a class="navbar-item pie-parent">
                 <img id="pie" src="../../images/pietest.png" alt="pie logo" />
               </a>
-              <p class="navbar-item" id="direction"> Click on the pie!</p>
+              <p class="navbar-item fancy title" id="direction"> Click on the pie!</p>
             </div>
+            
+                <div class="navbar-brand">
+                  <p class="navbar-item is-underlined fancy title secret">
+                      Menu
+                    </p>
+          <label for="menu-switch" class="navbar-burger" role="button" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </label>
+      </div>
             <div class="navbar-menu">
               <div class="navbar-end">
-                <div class="navbar-item has-dropdown is-hoverable">
-                <p class="navbar-item is-underlined">
-                  Menu
-                </p>
-                <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="/">
+                <a class="navbar-item fancy" href="/">
                   Home
                 </a>
                 {{#if logged_in}}
-                <a class="navbar-item" href="/profile"><span id="profile-name" >{{user_name}}</span>'s Profile
+                <a class="navbar-item fancy" href="/profile"><span id="profile-name" >{{user_name}}</span>'s Profile
                   </a>
                   <button
-                    class="no-button navbar-item"
+                    class="no-button navbar-item fancy"
                     id="logout"
                   >Logout</button>
                 {{else}}
-                  <a class="navbar-item" href="/login">
+                  <a class="navbar-item fancy" href="/login">
                     Login
                   </a>
-                  <a class="navbar-item" href="/signup">
+                  <a class="navbar-item fancy" href="/signup">
                     Signup
                   </a>
-                  </div>
-                  </div>
                 {{/if}}
               </div>
             </div>
@@ -60,7 +67,7 @@
       <div class="hero-body">
         <div class="container has-text-centered message-parent">
           <p class="title">Lord of the Pies</p>
-          <p class="subtitle">You shall not bake! (without recipies)</p>
+          <p class="subtitle">You shall not bake! (without reci-pies)</p>
         </div>
       </div>
 
@@ -75,7 +82,7 @@
       <main>{{{body}}}</main>
    
     <footer class="footer">
-      <div class="content has-text-centered">
+      <div class="content has-text-centered fancy">
         <p><strong>Lord of the Pies</strong>
           is brought to you by a
           <a href="https://github.com/myrojoylee/Lord-of-the-Pies">wonderful
@@ -92,4 +99,3 @@
 {{> chat}}
   <script src="/js/logout.js"></script>
 {{/if}}
-

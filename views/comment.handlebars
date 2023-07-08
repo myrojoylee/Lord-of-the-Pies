@@ -31,7 +31,7 @@
   <div class="field">
 
     <label
-      class="form-detail label has-text-centered mt-2"
+      class="form-detail label has-text-centered mt-2 fancy"
       for="comment-detail"
     >Type your comment below:</label>
     <textarea
@@ -42,9 +42,9 @@
     ></textarea>
     <button
       type="submit"
-      class="submitCommentBtn button is-rounded is-fullwidth mt-2"
+      class="submitCommentBtn button is-rounded is-fullwidth mt-2 fancy"
       data-id="{{recipe.id}}"
-    >Submit your comment</button>
+    >Submit your comment!</button>
   </div>
   {{! renders list of comments if they exist }}
   {{#if comments.length}}
@@ -59,7 +59,7 @@
                   {{comment.user.username}}</strong>
                 says:
               </p>
-              <p class="card-detail">{{detail}}</p>
+              <p class="card-detail fancy">{{detail}}</p>
             </div>
           </div>
         </div>
