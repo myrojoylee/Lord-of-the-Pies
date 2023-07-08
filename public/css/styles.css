@@ -24,22 +24,23 @@ main {
 
 #menu-switch {
   display: none;
- }
- #menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(1) {
-   transform: translateY(5px) rotate(45deg);
- }
- #menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(2) {
-   opacity: 0;
- }
- #menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(3) {
-   transform: translateY(-5px) rotate(-45deg);
- }
- #menu-switch:checked ~ .navbar-menu{
+}
+#menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+#menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(2) {
+  opacity: 0;
+}
+#menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+#menu-switch:checked ~ .navbar-menu {
   display: block;
- }
+}
 
 .secret {
   display: hidden;
+  color: transparent !important;
 }
 
 .title {
@@ -48,7 +49,7 @@ main {
 
 .subtitle,
 .fancy {
-  font-family: 'Dancing Script';
+  font-family: "Dancing Script";
 }
 
 .search-bar {
@@ -140,7 +141,6 @@ footer {
   display: block;
 }
 
-
 @media screen and (max-width: 767px) {
   .recipe-list {
     grid-template-columns: 1fr;
@@ -158,5 +158,3 @@ footer {
     display: block;
   }
 }
-
-
