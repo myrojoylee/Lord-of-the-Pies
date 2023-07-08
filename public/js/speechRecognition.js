@@ -1,3 +1,4 @@
+// initiating speech recognition object to utilize web speech API
 const SpeechRecognition =
   window.webkitSpeechRecognition || window.SpeechRecognition;
 const recognition = new SpeechRecognition();
