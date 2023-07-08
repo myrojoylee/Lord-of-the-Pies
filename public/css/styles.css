@@ -22,25 +22,13 @@ main {
   width: 100%;
 }
 
-#menu-switch {
-  display: none;
-}
-#menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
-}
-#menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(2) {
-  opacity: 0;
-}
-#menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
-}
-#menu-switch:checked ~ .navbar-menu {
-  display: block;
-}
-
 .secret {
   display: hidden;
   color: transparent !important;
+}
+
+.navbar-menu {
+  background-color: #90eef6;
 }
 
 .title {
