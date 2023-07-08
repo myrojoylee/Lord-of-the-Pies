@@ -31,6 +31,10 @@ main {
   background-color: #90eef6;
 }
 
+.navbar-item {
+  font-size: 1.5em;
+}
+
 .title {
   font-family: "Space Grotesk";
 }
