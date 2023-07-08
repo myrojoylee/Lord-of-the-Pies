@@ -34,7 +34,7 @@ async function renderRecipes() {
   <div class="card-content">
     <div class="media">
       <div class="media-left">
-        <figure class="image is-36x36">
+        <figure class="pie-icon">
           <img src="../../images/pietest.png" alt="basic pie image" />
         </figure>
       </div>

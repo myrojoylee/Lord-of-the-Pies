@@ -39,6 +39,12 @@ main {
   font-family: "Space Grotesk";
 }
 
+h1 {
+  font-family: "Space Grotesk";
+  font-size: 2.5em !important;
+  font-weight: bold !important;
+}
+
 .subtitle,
 .fancy {
   font-family: "Dancing Script";
@@ -72,12 +78,20 @@ footer {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 1.5em;
   color: #0a0a0a;
 }
 
 .no-button:hover {
   background-color: white;
+}
+
+#logout {
+  font-size: 1.5em !important;
+}
+
+.pie-icon {
+  width: 75%;
 }
 
 .candyhead {
@@ -114,6 +128,13 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .title {
+    font-size: 1.5em !important;
+  }
+
+  h1 {
+    font-size: 2em !important;
+  }
   #searchRecipe {
     font-size: 1.25em;
     /* width: 100%; */
@@ -121,19 +142,18 @@ footer {
   }
 }
 
-/* #logout-message {
-  color: transparent;
-}
-
-#login-link {
-  color: transparent;
-} */
-
 .navbar-dropdown {
   display: block;
 }
 
 @media screen and (max-width: 767px) {
+  .title {
+    font-size: 1.5em !important;
+  }
+  h1 {
+    font-size: 2em !important;
+  }
+
   .recipe-list {
     grid-template-columns: 1fr;
   }
