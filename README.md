@@ -41,6 +41,8 @@ GIVEN that the main CRUD functionality of the site is already accomplished:
 
 Chatbox code adapted from [Federico Azzu](https://github.com/federicoazzu/mscbot)'s repository.
 
+Code for Navbar Burger adapted from the Bulma [Documentation](https://bulma.io/documentation/components/navbar/#navbar-burger)
+
 ## License
 
 Refer to the license in the repo.
