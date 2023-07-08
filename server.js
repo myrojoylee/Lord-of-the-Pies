@@ -46,6 +46,6 @@ app.use(routes);
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(`Lord of the Pies listening to port ${PORT}!`)
+    console.log(`Lord of the Pies listening on http://localhost:${PORT}`)
   );
 });
