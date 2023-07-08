@@ -19,6 +19,7 @@ function getBotResponse(input) {
   }
 }
 
+// bot's rotating random response to any user input
 function rotatingRandomBotResponse() {
   let bank = [
     "Patience you must have, my young Padawan",

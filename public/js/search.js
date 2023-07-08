@@ -22,7 +22,7 @@ async function renderRecipes() {
     recipe.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
-// Search bar filter
+  // rendering cards for filtered search
   recipesFiltered.forEach((recipe) => {
     recipesDiv.innerHTML += `
       <div class="column card ml-2 mr-2">

@@ -1,7 +1,7 @@
+// handles input from sign up form
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
- 
   const username = document.querySelector("#username-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
@@ -21,7 +21,6 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
 
 document
   .querySelector("#signup-form")
