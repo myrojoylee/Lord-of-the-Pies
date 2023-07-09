@@ -58,6 +58,7 @@
   1. Click to signup for an account on the top right of the page. 
   2. Once logged in, you will be able to view and or post your own recipes.
   3. You can search for, view and comment on other people's recipes through the homepage. 
+![lord-of-the-pies-website](https://github.com/myrojoylee/Lord-of-the-Pies/assets/126195092/7405ea6b-eeb5-4261-817d-2e44360a3c68)
 
   [Click here for the Live Site](https://lord-of-the-pies-f3c957a9b4a8.herokuapp.com/)
 
