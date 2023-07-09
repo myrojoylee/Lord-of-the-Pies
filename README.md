@@ -70,6 +70,8 @@
   - [Aubrey McKinney](https://github.com/shadowasders)
   - [Jimmy Pedone](https://github.com/JimmyPedone)
 
+## License
+
 
   ## Tests
 
@@ -97,6 +99,7 @@
   ## Acknowledgements
   ### Sources:
   - Chatbox code adapted from [Federico Azzu](https://github.com/federicoazzu/mscbot)'s repository.
+  - Code for Navbar Burger adapted from the Bulma [Documentation](https://bulma.io/documentation/components/navbar/#navbar-burger)
 
   ### Thank you...
   - ... to our instructional team at Bootcamp for all the help and feedback.

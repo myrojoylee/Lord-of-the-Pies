@@ -22,7 +22,7 @@ async function renderRecipes() {
     recipe.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
-// Search bar filter
+  // rendering cards for filtered search
   recipesFiltered.forEach((recipe) => {
     recipesDiv.innerHTML += `
       <div class="column card ml-2 mr-2">
@@ -34,7 +34,7 @@ async function renderRecipes() {
   <div class="card-content">
     <div class="media">
       <div class="media-left">
-        <figure class="image is-36x36">
+        <figure class="pie-icon">
           <img src="../../images/pietest.png" alt="basic pie image" />
         </figure>
       </div>

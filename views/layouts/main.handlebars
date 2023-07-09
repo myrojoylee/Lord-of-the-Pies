@@ -20,26 +20,18 @@
     <section class="hero is-small candyhead">
       <div class="hero-head">
         <nav class="navbar">
-          <div class="container">
-            <input id="menu-switch" name="menu-switch" type="checkbox"/>
             <div class="navbar-brand">
               <a class="navbar-item pie-parent">
                 <img id="pie" src="../../images/pietest.png" alt="pie logo" />
               </a>
-              <p class="navbar-item fancy title" id="direction"> Click on the pie!</p>
+              <p class="navbar-item fancy" id="direction"> Click on the pie!</p>
             </div>
-            
-                <div class="navbar-brand">
-                  <p class="navbar-item is-underlined fancy title secret">
-                      Menu
-                    </p>
-          <label for="menu-switch" class="navbar-burger" role="button" aria-expanded="false">
+          <a class="navbar-burger" role="button" aria-expanded="false" data-target="options">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </label>
-      </div>
-            <div class="navbar-menu">
+        </a>
+            <div class="navbar-menu" id="options">
               <div class="navbar-end">
                 <a class="navbar-item fancy" href="/">
                   Home
@@ -59,6 +51,7 @@
                     Signup
                   </a>
                 {{/if}}
+            </div>
               </div>
             </div>
           </div>
@@ -66,7 +59,7 @@
       </div>
       <div class="hero-body">
         <div class="container has-text-centered message-parent">
-          <p class="title">Lord of the Pies</p>
+          <h1>Lord of the Pies</h1>
           <p class="subtitle">You shall not bake! (without reci-pies)</p>
         </div>
       </div>
@@ -95,6 +88,7 @@
 </html>
 
 <script src="/js/speechRecognition.js"></script>
+<script src="/js/burger.js"></script>
 {{#if logged_in}}
 {{> chat}}
   <script src="/js/logout.js"></script>

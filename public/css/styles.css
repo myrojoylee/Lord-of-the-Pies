@@ -22,33 +22,32 @@ main {
   width: 100%;
 }
 
-#menu-switch {
-  display: none;
- }
- #menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(1) {
-   transform: translateY(5px) rotate(45deg);
- }
- #menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(2) {
-   opacity: 0;
- }
- #menu-switch:checked + .navbar-brand .navbar-burger span:nth-child(3) {
-   transform: translateY(-5px) rotate(-45deg);
- }
- #menu-switch:checked ~ .navbar-menu{
-  display: block;
- }
-
 .secret {
   display: hidden;
+  color: transparent !important;
+}
+
+.navbar-menu {
+  background-color: #90eef6;
+}
+
+.navbar-item {
+  font-size: 1.5em;
 }
 
 .title {
   font-family: "Space Grotesk";
 }
 
+h1 {
+  font-family: "Space Grotesk";
+  font-size: 2.5em !important;
+  font-weight: bold !important;
+}
+
 .subtitle,
 .fancy {
-  font-family: 'Dancing Script';
+  font-family: "Dancing Script";
 }
 
 .search-bar {
@@ -79,12 +78,20 @@ footer {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 1.5em;
   color: #0a0a0a;
 }
 
 .no-button:hover {
   background-color: white;
+}
+
+#logout {
+  font-size: 1.5em !important;
+}
+
+.pie-icon {
+  width: 75%;
 }
 
 .candyhead {
@@ -121,6 +128,13 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .title {
+    font-size: 1.5em !important;
+  }
+
+  h1 {
+    font-size: 2em !important;
+  }
   #searchRecipe {
     font-size: 1.25em;
     /* width: 100%; */
@@ -128,20 +142,18 @@ footer {
   }
 }
 
-/* #logout-message {
-  color: transparent;
-}
-
-#login-link {
-  color: transparent;
-} */
-
 .navbar-dropdown {
   display: block;
 }
 
-
 @media screen and (max-width: 767px) {
+  .title {
+    font-size: 1.5em !important;
+  }
+  h1 {
+    font-size: 2em !important;
+  }
+
   .recipe-list {
     grid-template-columns: 1fr;
   }
@@ -158,5 +170,3 @@ footer {
     display: block;
   }
 }
-
-

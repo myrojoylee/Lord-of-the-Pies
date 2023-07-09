@@ -16,10 +16,6 @@ const commentFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    // const id = window.location.toString().split("/")[
-    //   window.location.toString().split("/").length - 1
-    // ];
-    // console.log(id);
     if (response.ok) {
       window.location.reload();
     } else {
