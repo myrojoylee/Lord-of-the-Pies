@@ -70,8 +70,6 @@
   - [Aubrey McKinney](https://github.com/shadowasders)
   - [Jimmy Pedone](https://github.com/JimmyPedone)
 
-## License
-
 
   ## Tests
 
