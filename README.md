@@ -72,8 +72,6 @@ Using our website is easy! First, you must create an account.
 - [Aubrey McKinney](https://github.com/shadowasders)
 - [Jimmy Pedone](https://github.com/JimmyPedone)
 
-## License
-
 ## Tests
 
 You will be able to perform unit tests using the jest package. Just type into the terminal `npm run test` or `npx jest` to run through all the tests provided in the test folder.
@@ -89,13 +87,17 @@ You will be able to perform unit tests using the jest package. Just type into th
 - Short Term:
   - Clean up styling for better UI
 - Long Term:
+  - a more detailed model to accommodate details of the recipe
   - Add functionality to chatbot using openAI API
   - Use tags to create category buttons for 'easy-search' function
   - Add a way to favorite recipes and add them to your personal list
-  - Adding validation for sign-up
-  - Add better error code to guide users to making a better password
+  - Adding validation for sign-up for stronger username/password
 
-## Acknowledgements
+## Contributions
+
+- There are no guidelines at this time, but if you would like to make a contribution, feel free to fork the repo, make a PR, and reach out to [Myro Joy Lee](mailto:myro.joy.olida.092282@gmail.com)
+
+## Acknowledgments
 
 ### Sources:
 
