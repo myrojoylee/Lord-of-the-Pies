@@ -64,6 +64,10 @@ Using our website is easy! First, you must create an account.
 
 [Click here for the Live Site](https://lord-of-the-pies-f3c957a9b4a8.herokuapp.com/)
 
+See below for a video demo:
+
+https://github.com/myrojoylee/Lord-of-the-Pies/assets/120980593/d38de879-7617-4099-9b15-eb5fa7a48b26
+
 ## Development Team
 
 - [Damien Brockington](https://github.com/damez21)
