@@ -32,6 +32,8 @@ Are you looking for new dessert recipes to impress your friends, or you want to 
 
 - [Future Considerations and Improvements](#future-considerations-and-improvements)
 
+- [Contributions](#contributions)
+
 - [Acknowledgments](#acknowledgements)
 
 - [License](#license)
